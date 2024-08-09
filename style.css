@@ -224,6 +224,13 @@ a {
   body {
     padding: 20px;
   }
+
+  #name {
+    font-size: 50px !important;
+  }
+  .disc {
+    font-size: 20px !important;
+  }
 }
 
 @keyframes bounce {
