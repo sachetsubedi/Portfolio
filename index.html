@@ -21,6 +21,7 @@
       font-size: x-large;
       background-color: var(--background-color);
       color: var(--secondary-color);
+      overflow-x: hidden;
     "
   >
     <div
@@ -46,8 +47,9 @@
         id="sheetTrigger"
         style="
           cursor: pointer;
-          background-color: var(--primary-color);
           margin-right: 20px;
+          color: var(--primary-color);
+          font-size: larger;
           padding: 15px;
           border-radius: 100%;
         "
@@ -60,17 +62,17 @@
       class="sheet"
       id="sheet"
       style="
-        transition: 0.5s ease-in-out;
-        display: none;
         height: 100vh;
         width: 200px;
         background-color: rgb(37, 37, 37);
+        z-index: 10;
         border: 1px solid var(--secondary-color);
         padding: 20px;
         position: absolute;
         top: 0;
-        right: 0;
+        right: -300px;
         color: var(--secondary-color);
+        transition: right 0.5s ease-in-out;
       "
     >
       <div
@@ -176,4 +178,5 @@
   <script src="./script.js"></script>
   <script src="./scripts/itemPopper.js"></script>
   <script src="./scripts/mouseFollower.js"></script>
+  <script src="./scripts//sheetController.js"></script>
 </html>
