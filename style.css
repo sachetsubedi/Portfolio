@@ -1,0 +1,243 @@
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Patrick+Hand&display=swap");
+:root {
+  --primary-color: #8223ff;
+  --background-color: #1a1a1a;
+  --secondary-color: #f3f3f3;
+}
+
+.dark-theme {
+  --primary-color: #8223ff;
+  --background-color: #1a1a1a;
+  --secondary-color: #f3f3f3;
+}
+* {
+  font-family: "Patrick Hand";
+  letter-spacing: 1.2;
+}
+
+a {
+  text-decoration: none;
+  color: var(--background-color);
+}
+
+.navigation ul {
+  gap: 100px;
+}
+.navigation ul a {
+  color: var(--secondary-color);
+  padding: 5px 2px;
+  border-radius: 0px !important;
+  transition: 0.2s ease-in-out;
+}
+.navigation ul a:hover {
+  background-color: var(--primary-color);
+}
+.navigation {
+  padding-right: 5%;
+}
+.navbar {
+  height: 10vh;
+  color: var(--secondary-color);
+}
+
+body {
+  padding: 0px;
+  margin: 0px;
+  font-family: monospace;
+}
+.logo {
+  padding-left: 20px;
+}
+
+body {
+  font-size: x-large;
+}
+
+.form input,
+.form textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: medium;
+  background-color: transparent;
+}
+
+.submit-btn {
+  background-color: slateblue;
+  color: var(--secondary-color);
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+  box-shadow: 1px 1px 1px 1px rgb(170, 170, 170);
+}
+.submit-btn:hover {
+  background-color: rgb(83, 65, 199);
+  box-shadow: none;
+}
+#hw {
+  color: blue;
+}
+.hw1 {
+  color: red;
+}
+h1 {
+  color: yellow;
+}
+
+.inputContainer {
+  border-radius: 5px;
+  border: 2px solid rgb(168, 168, 168);
+  padding: 2px 2px;
+  background-color: transparent;
+  width: 100%;
+  font-size: 25px;
+  color: var(--secondary-color);
+}
+
+.inputContainer input {
+  border-radius: 5px;
+  padding: 5px 3px;
+  width: 100%;
+  border: none;
+  background-color: transparent;
+  color: var(--secondary-color);
+  outline: none;
+  font-size: large;
+}
+.inputContainer input::placeholder,
+textarea::placeholder {
+  color: rgb(95, 95, 95);
+}
+.inputContainer textarea {
+  border-radius: 5px;
+  padding: 5px 3px;
+  width: 100%;
+  border: none;
+}
+
+.navigation ul a {
+  color: var(--secondary-color);
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: 0.2s ease-in-out;
+}
+
+#submitBtn {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+#message {
+  background-color: transparent;
+  color: var(--secondary-color);
+  font-size: large;
+  outline: none;
+}
+
+#submitBtn:hover {
+  background-color: var(--primary-color);
+}
+.projectAnchors {
+  border: 1px solid var(--secondary-color);
+  color: var(--secondary-color);
+  transition: 0.2s ease-in-out;
+  padding: 20px;
+  border-radius: 5px;
+}
+.projectAnchors:hover {
+  background-color: var(--primary-color);
+  color: var(--background-color);
+}
+.projectsWrapper {
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+.projectsWrapper a {
+  width: 10em;
+}
+.skillsIcons {
+  font-size: 80px;
+}
+a {
+  color: var(--secondary-color);
+}
+#sheetTrigger {
+  display: none;
+}
+.sheetContent {
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  margin-top: 20px;
+}
+
+.sheetContent ul {
+  list-style: none;
+}
+.sheetContent ul li {
+  padding: 10px;
+  border-bottom: 1px solid var(--primary-color);
+  transition: 0.2s ease-in-out;
+  width: 100%;
+}
+.sheetItems {
+  padding: 10px 15px;
+  transition: 0.2s ease-in-out;
+}
+.sheetItems:hover {
+  background-color: var(--primary-color);
+  color: var(--background-color);
+}
+#sheetClose:hover {
+  background-color: var(--primary-color);
+}
+.learnMore {
+  animation: bounce 2s infinite;
+}
+@media (max-width: 1100px) {
+  #sheetTrigger {
+    display: block;
+  }
+  #avatarImage {
+    display: none;
+  }
+  .navigation ul {
+    display: none !important;
+  }
+  .aboutWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .aboutDes {
+    width: 100% !important;
+  }
+  body {
+    padding: 20px;
+  }
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}

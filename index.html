@@ -1,0 +1,180 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sachet Subedi</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body
+    style="
+      display: flex;
+      flex-direction: column;
+      height: 110vh;
+      font-size: x-large;
+      background-color: var(--background-color);
+      color: var(--secondary-color);
+    "
+  >
+    <div
+      class="navbar"
+      style="display: flex; justify-content: space-between; align-items: center"
+    >
+      <div class="logo" style="align-items: center">
+        <img src="./assets/logo.png" alt="" height="70" />
+      </div>
+      <div class="navigation">
+        <ul style="display: flex; list-style: none; align-items: center">
+          <a
+            href="./index.html"
+            style="border-bottom: 1px solid var(--primary-color)"
+            >Home</a
+          >
+          <a href="./pages/about.html">About</a>
+          <a href="./pages/projects.html">Projects</a>
+          <a href="./pages/contact.html">Contact</a>
+        </ul>
+      </div>
+      <div
+        id="sheetTrigger"
+        style="
+          cursor: pointer;
+          background-color: var(--primary-color);
+          margin-right: 20px;
+          padding: 15px;
+          border-radius: 100%;
+        "
+      >
+        <i class="fa-solid fa-bars"></i>
+      </div>
+    </div>
+
+    <div
+      class="sheet"
+      id="sheet"
+      style="
+        transition: 0.5s ease-in-out;
+        display: none;
+        height: 100vh;
+        width: 200px;
+        background-color: rgb(37, 37, 37);
+        border: 1px solid var(--secondary-color);
+        padding: 20px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        color: var(--secondary-color);
+      "
+    >
+      <div
+        class="sheetButton"
+        id="sheetClose"
+        style="
+          cursor: pointer;
+          transition: 0.2s ease-in-out;
+          padding: 10px 18px;
+          border-radius: 100%;
+          width: fit-content;
+        "
+      >
+        X
+      </div>
+      <div class="sheetContent">
+        <div
+          style="display: flex; gap: 2px; flex-direction: column; width: 100%"
+        >
+          <a class="sheetItems" href="./index.html">Home</a>
+          <a class="sheetItems" href="./pages/about.html">About</a>
+          <a class="sheetItems" href="./pages/contact.html">Contact</a>
+        </div>
+      </div>
+    </div>
+
+    <main
+      style="
+        padding: 50px 20px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      "
+    >
+      <h1
+        id=""
+        style="
+          font-size: 100px;
+          color: var(--secondary-color);
+          margin: 0px;
+          font-weight: 300;
+        "
+      >
+        Sachet Subedi
+      </h1>
+      <h3 class="disc" style="letter-spacing: 2">Designer and Developer</h3>
+
+      <div class="learnMore" style="margin-top: 100px">
+        <a
+          href="./pages/about.html"
+          style="
+            text-decoration: none;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+          "
+          >Learn More
+        </a>
+      </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer
+      style="
+        background-color: #333;
+        color: var(--secondary-color);
+        text-align: center;
+        padding: 20px;
+      "
+    >
+      <p style="margin: 0">&copy; 2024 Sachet Subedi</p>
+    </footer>
+    <div
+      id="mouseFollower"
+      style="
+        position: absolute;
+        left: 0;
+        top: 0;
+        border: 2px solid var(--primary-color);
+        height: 30px;
+        width: 30px;
+        border-radius: 100%;
+        transition: background-color 0.1s ease-in-out;
+        z-index: -10;
+      "
+    ></div>
+
+    <!-- POP items -->
+    <img
+      src="assets/popovers/c.png"
+      id="popImage"
+      alt=""
+      style="
+        height: 50px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        transition: opacity 0.5s ease-in-out;
+      "
+    />
+  </body>
+  <script src="./script.js"></script>
+  <script src="./scripts/itemPopper.js"></script>
+  <script src="./scripts/nameScroller.js"></script>
+  <script src="./scripts/mouseFollower.js"></script>
+</html>

@@ -1,0 +1,513 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../styles/aboutcss.css" />
+    <title>About | Sachet Subedi</title>
+  </head>
+
+  <body
+    style="
+      background-color: var(--background-color);
+      padding-bottom: 20px;
+      color: var(--secondary-color);
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
+        sans-serif;
+    "
+  >
+    <div
+      class="navbar"
+      style="display: flex; justify-content: space-between; align-items: center"
+    >
+      <div class="logo" style="align-items: center">
+        <img src="../assets/logo.png" alt="" height="70" />
+      </div>
+      <div class="navigation">
+        <ul style="display: flex; list-style: none; align-items: center">
+          <a href="../index.html">Home</a>
+          <a
+            href=" about.html"
+            style="border-bottom: 1px solid var(--primary-color)"
+            >About</a
+          >
+          <a href="./projects.html">Projects</a>
+          <a href="contact.html">Contact</a>
+        </ul>
+      </div>
+      <div
+        id="sheetTrigger"
+        style="
+          cursor: pointer;
+          background-color: var(--primary-color);
+          margin-right: 20px;
+          padding: 15px;
+          border-radius: 100%;
+        "
+      >
+        <i class="fa-solid fa-bars"></i>
+      </div>
+    </div>
+
+    <div
+      class="sheet"
+      id="sheet"
+      style="
+        transition: 0.5s ease-in-out;
+        display: none;
+        height: 100vh;
+        width: 200px;
+        background-color: rgb(37, 37, 37);
+        border: 1px solid white;
+        padding: 20px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        color: white;
+      "
+    >
+      <div
+        class="sheetButton"
+        id="sheetClose"
+        style="
+          cursor: pointer;
+          transition: 0.2s ease-in-out;
+          padding: 10px 15px;
+          border-radius: 100%;
+          width: fit-content;
+        "
+      >
+        X
+      </div>
+      <div class="sheetContent">
+        <div
+          style="display: flex; gap: 2px; flex-direction: column; width: 100%"
+        >
+          <a class="sheetItems" href="../index.html">Home</a>
+          <a class="sheetItems" href="./about.html">About</a>
+          <a class="sheetItems" href="./projects.html">Projects</a>
+          <a class="sheetItems" href="./contact.html">Contact</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- -------------------------------------------------------------------------------------------- -->
+    <div
+      class="main"
+      style="
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 50px;
+      "
+    >
+      <div class="container" style="width: 50%">
+        <div class="description" style="text-align: justify">
+          <h3>
+            I am
+            <span
+              style="
+                background-color: var(--primary-color);
+                padding: 1px 10px;
+                border-radius: 5px;
+              "
+            >
+              Sachet Subedi
+            </span>
+          </h3>
+          <br />
+          I am an experienced
+          <strong style="color: var(--primary-color)">
+            software developer
+          </strong>
+          with a strong programming background and a track record of delivering
+          high-quality software solutions. With over a year of freelance
+          experience, I possess proficiency in various
+          <strong style="color: var(--primary-color)"> frameworks</strong> and
+          <strong style="color: var(--primary-color)"> architectures </strong>.
+          I am dedicated to continuous learning and growth, seeking new
+          opportunities to expand my skills and contribute to the development
+          and maintenance of innovative software applications.
+        </div>
+        <!-- -------------------------------------------des finished -->
+        <!-- -------------------------------------------Skills start -->
+
+        <div class="skills">
+          <h3>Skills</h3>
+          <div class="stkillsList" style="margin-left: 30px">
+            <h4>Languages</h4>
+            <div
+              class="icons"
+              style="
+                display: flex;
+                align-items: center;
+                gap: 15px;
+                flex-wrap: wrap;
+              "
+            >
+              <img src="../assets/popovers/c.png" height="50px" alt="" />
+              <img src="../assets/popovers/cpp.png" height="50px" alt="" />
+              <img src="../assets/popovers/js.png" height="45px" alt="" />
+              <img src="../assets/popovers/html.png" height="45px" alt="" />
+              <img src="../assets/popovers/css.png" height="45px" alt="" />
+              <img src="../assets/popovers/ts.png" height="45px" alt="" />
+              <img src="../assets/popovers/markdown.png" height="50px" alt="" />
+            </div>
+            <!-- HOSTING-------------------------------------- -->
+            <h4>Hosting / SAAS</h4>
+            <div
+              class="icons"
+              style="
+                display: flex;
+                align-items: center;
+                gap: 5px;
+                flex-wrap: wrap;
+              "
+            >
+              <img src="../assets/popovers/aws.png" height="50px" alt="" />
+              <img src="../assets/popovers/azure.png" height="50px" alt="" />
+              <img
+                src="../assets/popovers/cloudflare.png"
+                height="80px"
+                alt=""
+              />
+              <img src="../assets/popovers/render.jpg" height="45px" alt="" />
+              <img
+                src="../assets/popovers/firebase.png"
+                height="50px"
+                alt=""
+                style="margin-left: 25px"
+              />
+              <img
+                src="../assets/popovers/googleCloud.png"
+                height="70px"
+                alt=""
+              />
+              <img src="../assets/popovers/Vercel.png" height="50px" alt="" />
+            </div>
+
+            <!-- Frameworks -->
+            <h4>Frameworks, Platforms, Library</h4>
+            <div
+              class="icons"
+              style="
+                display: flex;
+                align-items: center;
+                gap: 5px;
+                flex-wrap: wrap;
+              "
+            >
+              <img src="../assets/popovers/astro.png" height="50px" alt="" />
+              <img
+                src="../assets/popovers/bootstrap.png"
+                height="75px"
+                alt=""
+              />
+              <img src="../assets/popovers/express.png" height="50px" alt="" />
+              <img src="../assets/popovers/jquery.png" height="50px" alt="" />
+              <img src="../assets/popovers/jwt.png" height="60px" alt="" />
+              <img src="../assets/popovers/mui.png" height="60px" alt="" />
+              <img src="../assets/popovers/next.webp" height="50px" alt="" />
+              <img src="../assets/popovers/react.png" height="50px" alt="" />
+              <img
+                src="../assets/popovers/npm.png"
+                height="60px"
+                alt=""
+                style="margin-left: 15px"
+              />
+              <img
+                src="../assets/popovers/socket.png"
+                height="40px"
+                alt=""
+                style="margin-left: 15px"
+              />
+              <img
+                src="../assets/popovers/tailwind.png"
+                height="50px"
+                alt=""
+                style="margin-left: 15px"
+              />
+              <img
+                src="../assets/popovers/vite.png"
+                height="45px"
+                alt=""
+                style="margin-left: 15px"
+              />
+              <img
+                src="../assets/popovers/wordpress.png"
+                height="50px"
+                alt=""
+                style="margin-left: 15px"
+              />
+              <img
+                src="../assets/popovers/zod.svg"
+                height="55px"
+                alt=""
+                style="margin-left: 15px"
+              />
+              <img
+                src="../assets/popovers/shadcn.png"
+                height="40px"
+                alt=""
+                style="margin-left: 15px"
+              />
+            </div>
+
+            <!-- Database  -->
+            <h4>Databases and ORM</h4>
+            <div
+              class="icons"
+              style="display: flex; align-items: center; gap: 25px"
+            >
+              <img src="../assets/popovers/sql.png" height="50px" alt="" />
+              <img src="../assets/popovers/firebase.png" height="50px" alt="" />
+              <img src="../assets/popovers/prisma.jpg" height="50px" alt="" />
+              <img
+                src="../assets/popovers/sequalize.svg"
+                height="50px"
+                alt=""
+              />
+            </div>
+
+            <!-- design -->
+            <h4>Design</h4>
+            <div
+              class="icons"
+              style="display: flex; align-items: center; gap: 25px"
+            >
+              <img src="../assets/popovers/figma.png" height="50px" alt="" />
+              <img
+                src="../assets/popovers/illustrator.png"
+                height="50px"
+                alt=""
+              />
+              <img src="../assets/popovers/canva.webp" height="50px" alt="" />
+            </div>
+
+            <!-- CI/cd vcs -->
+            <h4>CI/CD, VCS</h4>
+            <div
+              class="icons"
+              style="display: flex; align-items: center; gap: 25px"
+            >
+              <img src="../assets/popovers/github.png" height="50px" alt="" />
+              <img
+                src="../assets/popovers/github-logo.png"
+                height="80px"
+                alt=""
+              />
+            </div>
+
+            <!-- Others -->
+            <h4>Others</h4>
+            <div
+              class="icons"
+              style="display: flex; align-items: center; gap: 25px"
+            >
+              <img src="../assets/popovers/docker.png" height="60px" alt="" />
+              <img src="../assets/popovers/eslint.png" height="50px" alt="" />
+              <img src="../assets/popovers/jira.png" height="50px" alt="" />
+              <img src="../assets/popovers/trello.png" height="45px" alt="" />
+            </div>
+          </div>
+        </div>
+        <!-- Skills finish -->
+
+        <!-- -------------------------------------------Education Start -->
+        <div class="education" style="margin-top: 100px">
+          <h2>Education</h2>
+          <div
+            class="educationList"
+            style="
+              margin-left: 30px;
+              display: flex;
+              gap: 20px;
+              align-items: center;
+            "
+          >
+            <div
+              class="indexLines"
+              style="
+                width: 3px;
+                background-color: var(--primary-color);
+                height: 200px;
+                position: relative;
+              "
+            >
+              <div
+                class="dot"
+                style="
+                  height: 20px;
+                  width: 20px;
+                  position: absolute;
+                  left: -10px;
+                  top: 0px;
+                  border-radius: 100%;
+                  background-color: var(--primary-color);
+                "
+              ></div>
+              <div
+                class="dot"
+                style="
+                  height: 20px;
+                  width: 20px;
+                  position: absolute;
+                  left: -10px;
+                  top: 100px;
+                  border-radius: 100%;
+                  background-color: var(--primary-color);
+                "
+              ></div>
+              <div
+                class="dot"
+                style="
+                  height: 20px;
+                  width: 20px;
+                  position: absolute;
+                  left: -10px;
+                  top: 200px;
+                  border-radius: 100%;
+                  background-color: var(--primary-color);
+                "
+              ></div>
+            </div>
+            <div
+              class="eduList"
+              style="
+                height: 235px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: baseline;
+                padding-top: 15px;
+              "
+            >
+              <div>Bachelors - St. Lawrence College (2022 - Present)</div>
+              <div>
+                High School - Canvas International College (2020 - 2021)
+              </div>
+              <div>
+                School - Saraswoti English Boarding School (2007 - 2019)
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Education finish -->
+
+        <!-- Experience -->
+        <div class="experience" style="margin-top: 100px">
+          <h2>Experience</h2>
+          <div
+            class="experience List"
+            style="
+              margin-left: 30px;
+              display: flex;
+              gap: 20px;
+              align-items: center;
+            "
+          >
+            <div
+              class="indexLines"
+              style="
+                width: 3px;
+                background-color: var(--primary-color);
+                height: 100px;
+                position: relative;
+              "
+            >
+              <div
+                class="dot"
+                style="
+                  height: 20px;
+                  width: 20px;
+                  position: absolute;
+                  left: -10px;
+                  top: 0px;
+                  border-radius: 100%;
+                  background-color: var(--primary-color);
+                "
+              ></div>
+              <div
+                class="dot"
+                style="
+                  height: 20px;
+                  width: 20px;
+                  position: absolute;
+                  left: -10px;
+                  top: 100px;
+                  border-radius: 100%;
+                  background-color: var(--primary-color);
+                "
+              ></div>
+            </div>
+            <div
+              class="eduList"
+              style="
+                height: 135px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: baseline;
+                padding-top: 15px;
+              "
+            >
+              <div>Velorona LLC - (2024 - Present)</div>
+              <div>Freelance Developer - (2021 - Present)</div>
+            </div>
+          </div>
+        </div>
+        <!-- Experience finish -->
+        <!-- Links -->
+        <div class="links">
+          <h2>Links</h2>
+          <div
+            class="linksList"
+            style="display: flex; gap: 15px; font-size: 40px; margin-left: 20px"
+          >
+            <a href="https://github.com/sachetsubedi" target="_blank">
+              <i class="linkItems fab fa-github"></i>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/sachet-subedi-801153256/"
+              target="_blank"
+            >
+              <i class="linkItems fab fa-linkedin"></i>
+            </a>
+            <a href="https://instagram.com/sachet_____" target="_blank">
+              <i class="linkItems fab fa-instagram"></i>
+            </a>
+            <a href="https://facebook.com/scht001" target="_blank">
+              <i class="linkItems fab fa-facebook"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- -------------------------------------------------------------------------------------------- -->
+
+        <div
+          id="mouseFollower"
+          style="
+            position: absolute;
+            left: 0;
+            top: 0;
+            border: 2px solid var(--primary-color);
+            height: 30px;
+            width: 30px;
+            border-radius: 100%;
+            transition: background-color 0.1s ease-in-out;
+            z-index: -10;
+          "
+        ></div>
+        <script src="../script.js"></script>
+        <script src="../scripts/mouseFollower.js"></script>
+      </div>
+    </div>
+  </body>
+</html>

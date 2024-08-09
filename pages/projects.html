@@ -1,0 +1,64 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../styles/projects.css" />
+    <title>Projects | Sachet Subedi</title>
+  </head>
+  <body>
+    <div
+      class="navbar"
+      style="display: flex; justify-content: space-between; align-items: center"
+    >
+      <div class="logo" style="align-items: center">
+        <img src="../assets/logo.png" alt="" height="70" />
+      </div>
+      <div class="navigation">
+        <ul style="display: flex; list-style: none; align-items: center">
+          <a href="../index.html">Home</a>
+          <a href=" about.html">About</a>
+          <a
+            href="projects.html"
+            style="border-bottom: 1px solid var(--primary-color)"
+            >Projects</a
+          >
+          <a href="contact.html">Contact</a>
+        </ul>
+      </div>
+      <div
+        id="sheetTrigger"
+        style="
+          cursor: pointer;
+          background-color: var(--primary-color);
+          margin-right: 20px;
+          padding: 15px;
+          border-radius: 100%;
+        "
+      >
+        <i class="fa-solid fa-bars"></i>
+      </div>
+    </div>
+
+    <div class="main">
+      <h3>Projects</h3>
+      <div id="projectsContainer"></div>
+    </div>
+    <div
+      id="mouseFollower"
+      style="
+        position: absolute;
+        left: 0;
+        top: 0;
+        border: 2px solid var(--primary-color);
+        height: 30px;
+        width: 30px;
+        border-radius: 100%;
+        transition: background-color 0.1s ease-in-out;
+        z-index: -10;
+      "
+    ></div>
+  </body>
+  <script type="module" src="../scripts/projectSeeder.js"></script>
+  <script src="../scripts/mouseFollower.js"></script>
+</html>

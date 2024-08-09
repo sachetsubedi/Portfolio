@@ -1,0 +1,188 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact | Sachet Subedi</title>
+    <link rel="stylesheet" href="../style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../styles/contact.css" />
+  </head>
+
+  <body
+    style="
+      font-size: x-large;
+      background-color: var(--background-color);
+      color: var(--secondary-color);
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
+        sans-serif;
+    "
+  >
+    <div
+      class="navbar"
+      style="display: flex; justify-content: space-between; align-items: center"
+    >
+      <div class="logo" style="align-items: center">
+        <img src="../assets/logo.png" alt="" height="70" />
+      </div>
+      <div class="navigation">
+        <ul style="display: flex; list-style: none; align-items: center">
+          <a href="../index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="./projects.html">Projects</a>
+          <a href="#" style="border-bottom: 1px solid var(--primary-color)"
+            >Contact</a
+          >
+        </ul>
+      </div>
+      <div
+        id="sheetTrigger"
+        style="
+          cursor: pointer;
+          background-color: var(--primary-color);
+          margin-right: 20px;
+          padding: 15px;
+          border-radius: 100%;
+        "
+      >
+        <i class="fa-solid fa-bars"></i>
+      </div>
+    </div>
+    <!-- ---------------------------------------------------- -->
+
+    <div
+      class="sheet"
+      id="sheet"
+      style="
+        transition: 0.5s ease-in-out;
+        display: none;
+        height: 100vh;
+        width: 200px;
+        background-color: rgb(37, 37, 37);
+        border: 1px solid white;
+        padding: 20px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        color: white;
+      "
+    >
+      <div
+        class="sheetButton"
+        id="sheetClose"
+        style="
+          cursor: pointer;
+          transition: 0.2s ease-in-out;
+          padding: 10px 18px;
+          border-radius: 100%;
+          width: fit-content;
+        "
+      >
+        X
+      </div>
+      <div class="sheetContent">
+        <div
+          style="display: flex; gap: 2px; flex-direction: column; width: 100%"
+        >
+          <a class="sheetItems" href="../index.html">Home</a>
+          <a class="sheetItems" href="./about.html">About</a>
+          <a class="sheetItems" href="./contact.html">Contact</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- -------------------------------------------------------------------------------- -->
+    <div
+      class="body"
+      style="
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 90vh;
+        flex-direction: column;
+      "
+    >
+      <h2>Get in touch</h2>
+      <div class="form" style="width: 30%; font-size: 20px">
+        <div class="inputContainers">
+          <label for="name" class="inputLabel">Name</label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            class="inputField"
+            required
+          />
+        </div>
+        <div class="inputContainers">
+          <label for="email" class="inputLabel">Email</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            class="inputField"
+            required
+          />
+        </div>
+        <div class="inputContainers">
+          <label for="phone" class="inputLabel">Phone</label>
+          <input
+            type="tel"
+            name="phone"
+            id="phone"
+            class="inputField"
+            required
+          />
+        </div>
+        <div class="inputContainers">
+          <label for="message" class="inputLabel">Message</label>
+          <textarea
+            name="message"
+            id="message"
+            class="inputField"
+            required
+          ></textarea>
+        </div>
+        <button
+          style="
+            width: 100%;
+            font-size: 20px;
+            background-color: var(--primary-color);
+            border: none;
+            border-radius: 5px;
+            color: white;
+            padding: 5px;
+            transition: 0.2s ease-in-out;
+            cursor: pointer;
+          "
+          class="submitBtn"
+        >
+          Submit
+        </button>
+      </div>
+    </div>
+    <div
+      id="mouseFollower"
+      style="
+        position: absolute;
+        left: 0;
+        top: 0;
+        border: 2px solid var(--primary-color);
+        height: 30px;
+        width: 30px;
+        border-radius: 100%;
+        transition: background-color 0.1s ease-in-out;
+        z-index: -10;
+      "
+    ></div>
+    <!-- <div id="nameDisplay" style="font-size: xx-large"></div> -->
+    <script src="../script.js"></script>
+    <script src="../scripts/validator.js"></script>
+    <script src="../scripts/mouseFollower.js"></script>
+  </body>
+</html>

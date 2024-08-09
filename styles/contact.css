@@ -1,0 +1,28 @@
+.inputContainers {
+  position: relative;
+}
+.inputLabel {
+  position: absolute;
+  top: -10px;
+  left: 10px;
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+  background-color: black;
+}
+.inputField {
+  width: 100%;
+  font-size: 20px !important;
+  color: white;
+  border: 1px solid white;
+}
+.inputField:focus {
+  outline: 1px solid var(--primary-color);
+}
+.submitBtn:hover {
+  background-color: rgb(160, 44, 255) !important;
+}
+@media (max-width: 800px) {
+  .form {
+    width: 100% !important;
+  }
+}
