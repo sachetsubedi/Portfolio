@@ -192,14 +192,11 @@ a {
 .sheetItems {
   padding: 10px 15px;
   transition: 0.2s ease-in-out;
+  gap: 10px;
+  display: flex;
+  align-items: center;
 }
-.sheetItems:hover {
-  background-color: var(--primary-color);
-  color: var(--background-color);
-}
-#sheetClose:hover {
-  background-color: var(--primary-color);
-}
+
 .learnMore {
   animation: bounce 2s infinite;
 }

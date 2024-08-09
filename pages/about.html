@@ -46,8 +46,9 @@
         id="sheetTrigger"
         style="
           cursor: pointer;
-          background-color: var(--primary-color);
           margin-right: 20px;
+          color: var(--primary-color);
+          font-size: larger;
           padding: 15px;
           border-radius: 100%;
         "
@@ -60,17 +61,17 @@
       class="sheet"
       id="sheet"
       style="
-        transition: 0.5s ease-in-out;
-        display: none;
         height: 100vh;
         width: 200px;
         background-color: rgb(37, 37, 37);
-        border: 1px solid white;
+        z-index: 10;
+        border: 1px solid var(--secondary-color);
         padding: 20px;
         position: absolute;
         top: 0;
-        right: 0;
-        color: white;
+        right: -300px;
+        color: var(--secondary-color);
+        transition: right 0.5s ease-in-out;
       "
     >
       <div
@@ -79,21 +80,31 @@
         style="
           cursor: pointer;
           transition: 0.2s ease-in-out;
-          padding: 10px 15px;
+          padding: 10px;
           border-radius: 100%;
           width: fit-content;
+          color: var(--primary-color);
         "
       >
-        X
+        <i class="fa-solid fa-times"></i>
       </div>
       <div class="sheetContent">
         <div
           style="display: flex; gap: 2px; flex-direction: column; width: 100%"
         >
-          <a class="sheetItems" href="../index.html">Home</a>
-          <a class="sheetItems" href="./about.html">About</a>
-          <a class="sheetItems" href="./projects.html">Projects</a>
-          <a class="sheetItems" href="./contact.html">Contact</a>
+          <a class="sheetItems" href="../index.html"
+            ><i class="fa-solid fa-house"></i> Home</a
+          >
+          <a class="sheetItems" href="./about.html"
+            ><i class="fa-solid fa-user"></i> About</a
+          >
+          <a class="sheetItems" href="./projects.html"
+            ><i class="fa-solid fa-code"></i> Projects</a
+          >
+
+          <a class="sheetItems" href="./contact.html"
+            ><i class="fa-solid fa-address-book"></i> Contact</a
+          >
         </div>
       </div>
     </div>
@@ -507,6 +518,7 @@
         ></div>
         <script src="../script.js"></script>
         <script src="../scripts/mouseFollower.js"></script>
+        <script src="../scripts/sheetController.js"></script>
       </div>
     </div>
   </body>

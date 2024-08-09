@@ -1,5 +1,4 @@
 if (window.innerWidth > 768) {
-  console.log(window.innerWidth);
   document.addEventListener("mousemove", (e) => {
     const follower = document.getElementById("mouseFollower");
     follower.style.top = e.clientY - 15 + window.scrollY + "px";
