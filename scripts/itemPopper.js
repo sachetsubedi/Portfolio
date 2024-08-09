@@ -49,13 +49,17 @@ const win = {
   y: innerHeight - 100,
 };
 
-setInterval(() => {
-  const index = Math.floor(Math.random() * paths.length);
-  imagePop.setAttribute("src", paths[index]);
-  imagePop.style.top = Math.random() * win.y + "px";
-  imagePop.style.left = Math.random() * win.x + "px";
-  imagePop.style.opacity = "1";
-  setTimeout(() => {
-    imagePop.style.opacity = "0";
-  }, 1000);
-}, 2000);
+if (window.innerWidth < 768) {
+  imagePop.style.display = "none";
+} else {
+  setInterval(() => {
+    const index = Math.floor(Math.random() * paths.length);
+    imagePop.setAttribute("src", paths[index]);
+    imagePop.style.top = Math.random() * win.y + "px";
+    imagePop.style.left = Math.random() * win.x + "px";
+    imagePop.style.opacity = "1";
+    setTimeout(() => {
+      imagePop.style.opacity = "0";
+    }, 1000);
+  }, 2000);
+}
