@@ -17,7 +17,7 @@
     style="
       display: flex;
       flex-direction: column;
-      height: 110vh;
+      height: 100%;
       font-size: x-large;
       background-color: var(--background-color);
       color: var(--secondary-color);
@@ -62,7 +62,7 @@
       class="sheet"
       id="sheet"
       style="
-        height: 100vh;
+        height: 100%;
         width: 200px;
         background-color: rgb(37, 37, 37);
         z-index: 10;
@@ -73,6 +73,7 @@
         right: -300px;
         color: var(--secondary-color);
         transition: right 0.5s ease-in-out;
+        display: none;
       "
     >
       <div
@@ -113,7 +114,6 @@
     <main
       style="
         padding: 50px 20px;
-        height: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -146,17 +146,6 @@
       </div>
     </main>
 
-    <!-- Footer Section -->
-    <footer
-      style="
-        background-color: #333;
-        color: var(--secondary-color);
-        text-align: center;
-        padding: 20px;
-      "
-    >
-      <p style="margin: 0">&copy; 2024 Sachet Subedi</p>
-    </footer>
     <div
       id="mouseFollower"
       style="

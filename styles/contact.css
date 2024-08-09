@@ -7,7 +7,7 @@
   left: 10px;
   font-size: 1.5rem;
   transition: all 0.3s ease;
-  background-color: black;
+  background-color: var(--background-color);
 }
 .inputField {
   width: 100%;
