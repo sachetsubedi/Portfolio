@@ -5,7 +5,7 @@ const emailField = document.getElementById("email");
 const phoneField = document.getElementById("phone");
 const messageField = document.getElementById("message");
 
-document.getElementById("submitBtn").addEventListener("click", () => {
+document.getElementById("submitBtn").addEventListener("click", (e) => {
   const name = nameField.value;
   const message = messageField.value;
   const email = emailField.value;
@@ -13,6 +13,8 @@ document.getElementById("submitBtn").addEventListener("click", () => {
 
   // validate the form input
   if (!validateInput(name, email, phone, message)) return;
+
+  e.target.disabled = true;
 
   const dataToSend = {
     name: name,
@@ -36,7 +38,11 @@ const notify = async (data) => {
   );
 
   const responseData = await response.json();
-  console.log(data);
+  if (response.ok) {
+    document.getElementById("alertSuccess").style.display = "flex";
+    document.getElementById("submitBtn").innerHTML = "Submitted";
+    resetForm();
+  }
 };
 
 const validateInput = (name, email, phone, message) => {
@@ -100,3 +106,10 @@ document.querySelectorAll(".inputField").forEach((element) => {
     }
   });
 });
+
+const resetForm = () => {
+  nameField.value = "";
+  emailField.value = "";
+  phoneField.value = "";
+  messageField.value = "";
+};
