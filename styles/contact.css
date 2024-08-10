@@ -22,6 +22,14 @@
 .submitBtn:hover {
   background-color: rgb(160, 44, 255) !important;
 }
+.footerLink {
+  padding: 2px;
+  border-radius: 100%;
+  transition: 0.25s ease-in-out;
+}
+.footerLink:hover {
+  outline: 2px solid var(--primary-color);
+}
 @media (max-width: 800px) {
   .form {
     width: 100% !important;
