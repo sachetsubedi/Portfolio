@@ -10,10 +10,11 @@
   background-color: var(--background-color);
 }
 .inputField {
-  width: 100%;
+  width: 100% !important;
   font-size: 20px !important;
   color: white;
   border: 1px solid white;
+  height: 50px;
 }
 .inputField:focus {
   outline: 1px solid var(--primary-color);
