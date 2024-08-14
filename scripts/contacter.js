@@ -26,6 +26,7 @@ document.getElementById("submitBtn").addEventListener("click", (e) => {
 });
 
 const notify = async (data) => {
+  document.getElementById("submitBtn").innerHTML = `<div class="loader"></div>`;
   const response = await fetch(
     "https://contact-backend.whitetree-ac90122e.australiaeast.azurecontainerapps.io",
     {
@@ -40,7 +41,38 @@ const notify = async (data) => {
   const responseData = await response.json();
   if (response.ok) {
     document.getElementById("alertSuccess").style.display = "flex";
-    document.getElementById("submitBtn").innerHTML = "Submitted";
+    document.getElementById(
+      "submitBtn"
+    ).innerHTML = `<div> Submitted </div> <div id="svgCheck">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="1em"
+              height="1em"
+              viewBox="0 0 48 48"
+            >
+              <defs>
+                <mask id="ipSCheckOne0">
+                  <g fill="none" stroke-linejoin="round" stroke-width="4">
+                    <path
+                      fill="#fff"
+                      stroke="#fff"
+                      d="M24 44a19.94 19.94 0 0 0 14.142-5.858A19.94 19.94 0 0 0 44 24a19.94 19.94 0 0 0-5.858-14.142A19.94 19.94 0 0 0 24 4A19.94 19.94 0 0 0 9.858 9.858A19.94 19.94 0 0 0 4 24a19.94 19.94 0 0 0 5.858 14.142A19.94 19.94 0 0 0 24 44Z"
+                    />
+                    <path
+                      stroke="#000"
+                      stroke-linecap="round"
+                      d="m16 24l6 6l12-12"
+                    />
+                  </g>
+                </mask>
+              </defs>
+              <path
+                fill="currentColor"
+                d="M0 0h48v48H0z"
+                mask="url(#ipSCheckOne0)"
+              />
+            </svg>
+          </div>`;
     resetForm();
   }
 };
