@@ -28,7 +28,7 @@ document.getElementById("submitBtn").addEventListener("click", (e) => {
 const notify = async (data) => {
   document.getElementById("submitBtn").innerHTML = `<div class="loader"></div>`;
   const response = await fetch(
-    "https://contact-backend.whitetree-ac90122e.australiaeast.azurecontainerapps.io",
+    "https://contact-backend-v2.whitetree-ac90122e.australiaeast.azurecontainerapps.io",
     {
       method: "POST",
       body: JSON.stringify(data),
