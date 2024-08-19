@@ -27,7 +27,7 @@ const render = Render.create({
 
 for (let i = 0; i < skillsIcons.length; i++) {
   const img = Bodies.circle(300, 200, 30, {
-    restitution: 0.9, // Bouncy ball
+    restitution: 0.5, // Bouncy ball
     render: {
       sprite: {
         texture: skillsIcons[i],
