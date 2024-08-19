@@ -202,6 +202,13 @@ a {
 .learnMore {
   animation: bounce 2s infinite;
 }
+
+canvas {
+  position: absolute;
+  background: transparent;
+  z-index: 10;
+  /* border: 1px solid var(--primary-color); */
+}
 @media (max-width: 1100px) {
   #sheetTrigger {
     display: block;
@@ -232,6 +239,12 @@ a {
   }
 }
 
+@media (max-width: 700px) {
+  canvas {
+    display: none;
+  }
+}
+
 @keyframes bounce {
   0%,
   20%,
@@ -252,5 +265,5 @@ canvas {
   position: absolute;
   background: transparent;
   z-index: 10;
-  border: 1px solid var(--primary-color);
+  /* border: 1px solid var(--primary-color); */
 }

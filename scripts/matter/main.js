@@ -23,28 +23,23 @@ const render = Render.create({
   },
 });
 
-// Create two bodies (ball and box)
-const ball = Bodies.circle(300, 200, 40, {
-  restitution: 0.9, // Bouncy ball
-  render: {
-    fillStyle: "blue",
-  },
-});
+// Add all images to the world
 
-const box = Bodies.rectangle(500, 200, 80, 80, {
-  restitution: 0.7, // Some bounce
-  render: {
-    fillStyle: "red",
-  },
-});
+for (let i = 0; i < skillsIcons.length; i++) {
+  const img = Bodies.circle(300, 200, 30, {
+    restitution: 0.9, // Bouncy ball
+    render: {
+      sprite: {
+        texture: skillsIcons[i],
+        xScale: 1,
+        yScale: 1,
+      },
+    },
+  });
+  Composite.add(engine.world, img);
+}
 
-// Add ground
-const ground = Bodies.rectangle(400, 590, 810, 30, {
-  isStatic: true,
-  render: {
-    fillStyle: "transparent",
-  },
-});
+console.log(skillsIcons.length);
 
 // Add invisible bounds (walls)
 const wallThickness = 50;
@@ -102,14 +97,7 @@ const bottomWall = Bodies.rectangle(
 );
 
 // Add all bodies to the world
-Composite.add(engine.world, [
-  ball,
-  box,
-  bottomWall,
-  leftWall,
-  rightWall,
-  topWall,
-]);
+Composite.add(engine.world, [bottomWall, leftWall, rightWall, topWall]);
 
 // Add mouse control
 const mouse = Mouse.create(render.canvas);
