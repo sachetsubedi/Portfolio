@@ -247,3 +247,10 @@ a {
     transform: translateY(-15px);
   }
 }
+
+canvas {
+  position: absolute;
+  background: transparent;
+  z-index: 10;
+  border: 1px solid var(--primary-color);
+}
