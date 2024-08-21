@@ -27,16 +27,13 @@ document.getElementById("submitBtn").addEventListener("click", (e) => {
 
 const notify = async (data) => {
   document.getElementById("submitBtn").innerHTML = `<div class="loader"></div>`;
-  const response = await fetch(
-    "https://contact-backend-v2.whitetree-ac90122e.australiaeast.azurecontainerapps.io",
-    {
-      method: "POST",
-      body: JSON.stringify(data),
-      headers: {
-        "content-type": "application/json",
-      },
-    }
-  );
+  const response = await fetch("https://contact-api.sachetsubedi001.com.np/", {
+    method: "POST",
+    body: JSON.stringify(data),
+    headers: {
+      "content-type": "application/json",
+    },
+  });
 
   const responseData = await response.json();
   if (response.ok) {
