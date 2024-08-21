@@ -70,8 +70,10 @@ const notify = async (data) => {
               />
             </svg>
           </div>`;
-    resetForm();
+  } else {
+    alert("Something went wrong. Please try again");
   }
+  resetForm();
 };
 
 const validateInput = (name, email, phone, message) => {
