@@ -11,7 +11,6 @@ document.getElementById("submitBtn").addEventListener("click", (e) => {
   const email = emailField.value;
   const phone = phoneField.value;
 
-  // validate the form input
   if (!validateInput(name, email, phone, message)) return;
 
   e.target.disabled = true;
@@ -28,7 +27,7 @@ document.getElementById("submitBtn").addEventListener("click", (e) => {
 const notify = async (data) => {
   document.getElementById("submitBtn").innerHTML = `<div class="loader"></div>`;
   const response = await fetch(
-    "https://contacter.whitetree-ac90122e.australiaeast.azurecontainerapps.io/",
+    "https://contacter.whitetree-ac90122e.australiaeast.azurecontainerapps.io",
     {
       method: "POST",
       body: JSON.stringify(data),
