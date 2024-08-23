@@ -26,16 +26,13 @@ document.getElementById("submitBtn").addEventListener("click", (e) => {
 
 const notify = async (data) => {
   document.getElementById("submitBtn").innerHTML = `<div class="loader"></div>`;
-  const response = await fetch(
-    "https://contact-backend-git-master-sachet-subedis-projects.vercel.app/send",
-    {
-      method: "POST",
-      body: JSON.stringify(data),
-      headers: {
-        "content-type": "application/json",
-      },
-    }
-  );
+  const response = await fetch("https://contact-backend-weld.vercel.app/send", {
+    method: "POST",
+    body: JSON.stringify(data),
+    headers: {
+      "content-type": "application/json",
+    },
+  });
 
   const responseData = await response.json();
   if (response.ok) {
