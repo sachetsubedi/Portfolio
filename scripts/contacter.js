@@ -27,7 +27,7 @@ document.getElementById("submitBtn").addEventListener("click", (e) => {
 const notify = async (data) => {
   document.getElementById("submitBtn").innerHTML = `<div class="loader"></div>`;
   const response = await fetch(
-    "https://contact-backend.whitetree-ac90122e.australiaeast.azurecontainerapps.io",
+    "https://contact-backend-git-master-sachet-subedis-projects.vercel.app/send",
     {
       method: "POST",
       body: JSON.stringify(data),
