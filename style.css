@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Patrick+Hand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=NTR&display=swap");
 :root {
   --primary-color: #8223ff;
   --background-color: #1a1a1a;
@@ -11,7 +11,9 @@
   --secondary-color: #f3f3f3;
 }
 * {
-  font-family: "Patrick Hand";
+  font-family: "NTR", sans-serif;
+  font-weight: 700;
+  font-style: normal;
   letter-spacing: 1.2;
 }
 
