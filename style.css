@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=NTR&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap");
 :root {
   --primary-color: #8223ff;
   --background-color: #1a1a1a;
@@ -11,10 +11,11 @@
   --secondary-color: #f3f3f3;
 }
 * {
-  font-family: "NTR", sans-serif;
-  font-weight: 700;
+  font-family: "Dosis", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
   font-style: normal;
-  letter-spacing: 1.2;
+  letter-spacing: 1.5px;
 }
 
 a {
