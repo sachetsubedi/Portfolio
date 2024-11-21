@@ -47,9 +47,9 @@ export const projects: {
       "A CLI chat application built with ExpressJs and Socket.io in a terminal theme",
   },
   {
-    title: "CLI chat application",
-    demoUrl: "cli.sachetsubedi001.com.np",
-    githubUrl: "cli.sachetsubedi001.com.np",
+    title: "Sorting Visaulaizer",
+    demoUrl: "https://vis.sachetsubedi001.com.np",
+    githubUrl: "",
     description:
       "A CLI chat application built with ExpressJs and Socket.io in a terminal theme",
   },

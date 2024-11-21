@@ -1,4 +1,5 @@
 import { ModeToggle } from "@/components/landing/ThemeToggle";
+import { TooltipProvider } from "@/components/ui/tooltip";
 import { ThemeProvider } from "@/providers/theme-provider";
 import type { Metadata } from "next";
 import "./globals.css";
@@ -23,8 +24,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <ModeToggle></ModeToggle>
-
-          {children}
+          <TooltipProvider>{children}</TooltipProvider>
         </ThemeProvider>
       </body>
     </html>

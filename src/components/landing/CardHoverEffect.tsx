@@ -1,7 +1,9 @@
 import { cn } from "@/lib/utils";
+import { Icon } from "@iconify/react/dist/iconify.js";
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
 import { useState } from "react";
+import { Tooltip, TooltipContent, TooltipTrigger } from "../ui/tooltip";
 
 export const HoverEffect = ({
   items,
@@ -28,36 +30,46 @@ export const HoverEffect = ({
         <Link
           href={item?.link}
           key={idx}
-          className="relative group  block p-2 h-full w-full"
+          className="relative group block p-2 h-full w-full"
           onMouseEnter={() => setHoveredIndex(idx)}
           onMouseLeave={() => setHoveredIndex(null)}
         >
-          <AnimatePresence>
-            {hoveredIndex === idx && (
-              <motion.span
-                className="absolute inset-0 h-full w-full bg-neutral-200 dark:bg-slate-800/[0.8] block  rounded-xl "
-                layoutId="hoverBackground"
-                initial={{ opacity: 0 }}
-                animate={{
-                  opacity: 1,
-                  transition: { duration: 0.15 },
-                }}
-                exit={{
-                  opacity: 0,
-                  transition: { duration: 0.15, delay: 0.2 },
-                }}
-              />
+          <Tooltip delayDuration={10}>
+            <TooltipTrigger className="pb-0 p-0 h-fit w-fit flex justify-center items-center">
+              <AnimatePresence>
+                {hoveredIndex === idx && (
+                  <motion.span
+                    className="absolute inset-0 h-full w-full bg-neutral-200 dark:bg-slate-800/[0.8] block  rounded-xl "
+                    layoutId="hoverBackground"
+                    initial={{ opacity: 0 }}
+                    animate={{
+                      opacity: 1,
+                      transition: { duration: 0.15 },
+                    }}
+                    exit={{
+                      opacity: 0,
+                      transition: { duration: 0.15, delay: 0.2 },
+                    }}
+                  />
+                )}
+              </AnimatePresence>
+              <Card>
+                {!item.icon && (
+                  <>
+                    <CardTitle>{item.title}</CardTitle>
+                    <CardDescription>{item.description}</CardDescription>
+                  </>
+                )}
+                {item.icon}
+              </Card>
+            </TooltipTrigger>
+            {!item.link && (
+              <TooltipContent className="font-bold tracking-widest flex items-center justify-center gap-2">
+                <Icon icon="typcn:warning" fontSize={15} />
+                Not available
+              </TooltipContent>
             )}
-          </AnimatePresence>
-          <Card>
-            {!item.icon && (
-              <>
-                <CardTitle>{item.title}</CardTitle>
-                <CardDescription>{item.description}</CardDescription>
-              </>
-            )}
-            {item.icon}
-          </Card>
+          </Tooltip>
         </Link>
       ))}
     </div>
