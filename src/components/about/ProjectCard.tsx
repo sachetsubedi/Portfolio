@@ -11,7 +11,7 @@ const ProjectCard: FC<{
   githubUrl?: string;
 }> = ({ title, description, demoUrl, githubUrl }) => {
   return (
-    <Card className="flex justify-between">
+    <Card className="flex justify-between bg-transparent">
       <div>
         <CardHeader>
           <CardTitle className="font-bold tracking-widest">{title}</CardTitle>

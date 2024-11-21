@@ -4,7 +4,7 @@ import ProjectCard from "./ProjectCard";
 
 const Projects = () => {
   return (
-    <Card className="border-none outline-none mt-32">
+    <Card className="border-none outline-none mt-32 bg-transparent">
       <CardHeader>
         <CardTitle className="tracking-widest text-lg">Projects</CardTitle>
       </CardHeader>
