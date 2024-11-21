@@ -44,20 +44,18 @@ export const projects: {
     demoUrl: "https://cli.sachetsubedi001.com.np",
     githubUrl: "https://github.com/sachetsubedi/chat-CLI",
     description:
-      "A CLI chat application built with ExpressJs and Socket.io in a terminal theme",
+      "A CLI chat application built with ExpressJs and Socket.io in a terminal theme.",
   },
   {
     title: "Sorting Visaulaizer",
     demoUrl: "https://vis.sachetsubedi001.com.np",
     githubUrl: "",
-    description:
-      "A CLI chat application built with ExpressJs and Socket.io in a terminal theme",
+    description: "A visualizer that visualizes working of sorting algorithms.",
   },
   {
-    title: "CLI chat application",
-    demoUrl: "cli.sachetsubedi001.com.np",
-    githubUrl: "cli.sachetsubedi001.com.np",
-    description:
-      "A CLI chat application built with ExpressJs and Socket.io in a terminal theme",
+    title: "Image Analyzer",
+    demoUrl: "https://analyze.sachetsubedi001.com.np",
+    githubUrl: "https://github.com/sachetsubedi/image-analyzer",
+    description: "An AI powered image analyzer. ",
   },
 ];
