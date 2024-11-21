@@ -27,8 +27,7 @@ const ContactIcons = () => {
             className="w-fit border-2 border-black dark:border-white rounded-sm p-[2px]"
           >
             <Link href={contact.link}>
-              {" "}
-              <Icon icon={contact.icon} fontSize={20}></Icon>{" "}
+              <Icon icon={contact.icon} fontSize={20}></Icon>
             </Link>
           </Card>
         );

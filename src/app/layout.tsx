@@ -1,3 +1,4 @@
+import { ModeToggle } from "@/components/landing/ThemeToggle";
 import { ThemeProvider } from "@/providers/theme-provider";
 import type { Metadata } from "next";
 import "./globals.css";
@@ -14,13 +15,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body>
+      <body className="relative">
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
           enableSystem
           disableTransitionOnChange
         >
+          <ModeToggle></ModeToggle>
+
           {children}
         </ThemeProvider>
       </body>
