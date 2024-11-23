@@ -1,15 +1,16 @@
 import Projects from "@/components/about/Projects";
-import { BackgroundBeamsWithCollision } from "@/components/ui/background-beams";
+import TechStack from "@/components/about/TechStack";
 
 const Page = () => {
   return (
-    <BackgroundBeamsWithCollision className="block">
-      <div className="flex justify-center">
-        <div className="w-1/2">
-          <Projects></Projects>
-        </div>
+    // <BackgroundBeamsWithCollision className="block -z-50 pointer-events-none">
+    <div className="flex justify-center">
+      <div className="w-1/2">
+        <TechStack></TechStack>
+        <Projects></Projects>
       </div>
-    </BackgroundBeamsWithCollision>
+    </div>
+    // </BackgroundBeamsWithCollision>
   );
 };
 

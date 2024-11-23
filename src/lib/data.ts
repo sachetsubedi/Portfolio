@@ -59,3 +59,24 @@ export const projects: {
     description: "An AI powered image analyzer. ",
   },
 ];
+
+export const techStack = [
+  {
+    topic: "Languages",
+    items: [
+      { icon: "lineicons:typescript", title: "TypeScript" },
+      { icon: "lineicons:javascript", title: "JavaScript" },
+      { icon: "lineicons:html5", title: "HTML5" },
+      { icon: "lineicons:css3", title: "CSS3" },
+    ],
+  },
+  {
+    topic: "Frameworks",
+    items: [
+      { icon: "lineicons:typescript", title: "TypeScript" },
+      { icon: "lineicons:javascript", title: "JavaScript" },
+      { icon: "lineicons:html5", title: "HTML5" },
+      { icon: "lineicons:css3", title: "CSS3" },
+    ],
+  },
+];
