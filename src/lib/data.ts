@@ -58,6 +58,23 @@ export const projects: {
     githubUrl: "https://github.com/sachetsubedi/image-analyzer",
     description: "An AI powered image analyzer. ",
   },
+  {
+    title: "Links Shortner",
+    githubUrl: "https://github.com/sachetsubedi/links-shortner",
+    description: "Your very own link shortner ready to be deployed.",
+  },
+  {
+    title: "To Do List",
+    githubUrl: "https://github.com/sachetsubedi/To-Do-List",
+    demoUrl: "https://todo.sachetsubedi001.com.np",
+    description: "A simple to do list to track your tasks.",
+  },
+  {
+    title: "Text Cryptography",
+    githubUrl: "https://github.com/sachetsubedi/Text-Encryption",
+    description:
+      "Simple text encryption and decryption programs with different methods.",
+  },
 ];
 
 export const techStack = [

@@ -14,6 +14,7 @@ export const HoverEffect = ({
     description: string;
     link: string;
     icon?: React.ReactNode;
+    tooltip?: string;
   }[];
   className?: string;
 }) => {
@@ -30,6 +31,7 @@ export const HoverEffect = ({
         <Link
           href={item?.link}
           key={idx}
+          target="_blank"
           className="relative group block p-2 h-full w-full"
           onMouseEnter={() => setHoveredIndex(idx)}
           onMouseLeave={() => setHoveredIndex(null)}
@@ -67,6 +69,11 @@ export const HoverEffect = ({
               <TooltipContent className="font-bold tracking-widest flex items-center justify-center gap-2">
                 <Icon icon="typcn:warning" fontSize={15} />
                 Not available
+              </TooltipContent>
+            )}
+            {item.tooltip && item.link && (
+              <TooltipContent className="font-bold tracking-widest flex items-center justify-center gap-2">
+                {item.tooltip}
               </TooltipContent>
             )}
           </Tooltip>

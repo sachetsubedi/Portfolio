@@ -11,7 +11,7 @@ const ProjectCard: FC<{
   githubUrl?: string;
 }> = ({ title, description, demoUrl, githubUrl }) => {
   return (
-    <Card className="flex justify-between bg-transparent">
+    <Card className="flex justify-between bg-transparent border-2 border-black dark:border-white">
       <div>
         <CardHeader>
           <CardTitle className="font-bold tracking-widest">{title}</CardTitle>
@@ -29,12 +29,14 @@ const ProjectCard: FC<{
               description: "",
               link: githubUrl || "",
               icon: <Icon icon={"mdi:github"}></Icon>,
+              tooltip: "Github",
             },
             {
               title: "",
               description: "",
               link: demoUrl || "",
               icon: <Icon icon={"mdi:globe"}></Icon>,
+              tooltip: "Demo",
             },
           ]}
         ></HoverEffect>

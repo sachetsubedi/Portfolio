@@ -1,6 +1,6 @@
 import { projects } from "@/lib/data";
 import { FC } from "react";
-import { Card, CardContent, CardHeader, CardTitle } from "../ui/card";
+import { Card, CardContent, CardHeader } from "../ui/card";
 import ProjectCard from "./ProjectCard";
 
 const Projects: FC<{ hidden: boolean }> = ({ hidden }) => {
@@ -9,9 +9,7 @@ const Projects: FC<{ hidden: boolean }> = ({ hidden }) => {
       className="border-none outline-none mt-10 bg-transparent shadow-none"
       hidden={hidden}
     >
-      <CardHeader>
-        <CardTitle className="tracking-widest text-lg">Projects</CardTitle>
-      </CardHeader>
+      <CardHeader></CardHeader>
       <CardContent className="flex flex-col gap-3">
         {projects.map((project, idx) => {
           return (

@@ -1,5 +1,6 @@
 "use client";
 import Projects from "@/components/about/Projects";
+import TabItem from "@/components/about/TabItem";
 import TechStack from "@/components/about/TechStack";
 import { Tab, Tabs } from "@mui/material";
 import { useTheme } from "next-themes";
@@ -10,7 +11,6 @@ const Page = () => {
   const theme = useTheme();
 
   return (
-    // <BackgroundBeamsWithCollision className="block -z-50 pointer-events-none">
     <div className="flex justify-center">
       <div className="w-1/2">
         <Tabs
@@ -28,7 +28,12 @@ const Page = () => {
           }}
         >
           <Tab
-            label="Tech Stack"
+            label={
+              <TabItem
+                icon="solar:laptop-minimalistic-bold"
+                label="Tech Stack"
+              ></TabItem>
+            }
             onClick={() => {
               setTabValue(0);
             }}
@@ -46,7 +51,9 @@ const Page = () => {
           />
 
           <Tab
-            label="Projects"
+            label={
+              <TabItem icon="solar:code-square-bold" label="Projects"></TabItem>
+            }
             onClick={() => {
               setTabValue(1);
             }}
