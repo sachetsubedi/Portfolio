@@ -1,10 +1,14 @@
 import { projects } from "@/lib/data";
+import { FC } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "../ui/card";
 import ProjectCard from "./ProjectCard";
 
-const Projects = () => {
+const Projects: FC<{ hidden: boolean }> = ({ hidden }) => {
   return (
-    <Card className="border-none outline-none mt-32 bg-transparent shadow-none">
+    <Card
+      className="border-none outline-none mt-10 bg-transparent shadow-none"
+      hidden={hidden}
+    >
       <CardHeader>
         <CardTitle className="tracking-widest text-lg">Projects</CardTitle>
       </CardHeader>
