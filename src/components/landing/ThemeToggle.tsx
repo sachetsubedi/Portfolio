@@ -12,27 +12,32 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { Icon } from "@iconify/react/dist/iconify.js";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Tooltip, TooltipContent, TooltipTrigger } from "../ui/tooltip";
 
 export function ModeToggle() {
   const { setTheme } = useTheme();
 
+  const pathname = usePathname();
+
   return (
     <DropdownMenu>
-      <Link href="/">
-        <Tooltip delayDuration={10}>
-          <TooltipTrigger asChild>
-            <Button
-              variant="outline"
-              size="sm"
-              className="absolute top-3 right-20  z-[1000000] h-9"
-            >
-              <Icon icon="solar:home-2-linear" />
-            </Button>
-          </TooltipTrigger>
-          <TooltipContent className="font-bold">Home</TooltipContent>
-        </Tooltip>
-      </Link>
+      {pathname != "/" && (
+        <Link href="/">
+          <Tooltip delayDuration={10}>
+            <TooltipTrigger asChild>
+              <Button
+                variant="outline"
+                size="sm"
+                className="absolute top-3 left-5 z-[1000000] h-9"
+              >
+                <Icon icon="solar:home-2-linear" />
+              </Button>
+            </TooltipTrigger>
+            <TooltipContent className="font-bold">Home</TooltipContent>
+          </Tooltip>
+        </Link>
+      )}
       <Tooltip delayDuration={10}>
         <TooltipTrigger
           asChild

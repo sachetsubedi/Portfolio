@@ -8,7 +8,6 @@ export default function Home() {
       <BackgroundBeamsWithCollision>
         <div className="dark:text-white">
           <Greeting></Greeting>
-          <div></div>
         </div>
       </BackgroundBeamsWithCollision>
     </div>

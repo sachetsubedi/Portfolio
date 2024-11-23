@@ -1,3 +1,5 @@
+import Link from "next/link";
+import { Button } from "../ui/button";
 import ContactIcons from "./ContactIcons";
 import IconGlobe from "./IconGlobe";
 
@@ -11,6 +13,13 @@ const Greeting = () => {
           I build things for the web.
         </span>
         <ContactIcons></ContactIcons>
+        <div>
+          <Link href={"/about"}>
+            <Button variant={"outline"} className="font-bold">
+              About Me
+            </Button>
+          </Link>
+        </div>
       </div>
       <div className="right">
         <IconGlobe></IconGlobe>
