@@ -9,7 +9,6 @@ const TechStack = () => {
         <CardHeader>
           <CardTitle className="tracking-widest text-lg">Tech Stack</CardTitle>
         </CardHeader>
-        <TechStackCard icon="lineicons:javascript" title="JavaScript" />
 
         <CardContent className="p-0">
           {techStack.map((stack) => {
@@ -18,7 +17,7 @@ const TechStack = () => {
                 <CardHeader>
                   <CardTitle className="text-lg">{stack.topic}</CardTitle>
                 </CardHeader>
-                <div className="flex flex-wrap gap-4">
+                <div className="flex flex-wrap ">
                   {stack.items.map((item) => {
                     return (
                       <TechStackCard
