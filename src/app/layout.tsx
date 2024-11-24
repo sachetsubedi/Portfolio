@@ -8,9 +8,10 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Sachet Subedi",
-  description: "Portfolio of Sachet Subedi",
+  description:
+    "Welcome to the portfolio of Sachet Subedi, a passionate junior full-stack developer with expertise in modern web technologies like Next.js, Tailwind CSS, Prisma, and Express. Explore innovative projects like custom UI components, payroll systems, and creative Matter.js animations. With a strong focus on scalability and unique ideas, Sachet thrives on building meaningful solutions and is always eager to learn and experiment. Dive into projects that blend creativity and functionality, showcasing a developer dedicated to crafting exceptional user experiences.",
   keywords:
-    "Sachet Subedi, Portfolio, Developer, Designer, Full Stack Developer, Frontend Developer, Backend Developer, UI/UX Designer, Sachet, Subedi",
+    "Sachet Subedi, Portfolio, Developer, Designer, Full Stack Developer, Frontend Developer, Backend Developer, UI/UX Designer, Sachet, Subedi, Next.js Developer, Tailwind CSS Expert, Prisma Developer, Creative Animations, Matter.js Developer, Modern Web Solutions, Node.js Developer, Express.js Applications, Custom UI Components, Web Technology Projects",
 };
 
 export default function RootLayout({
