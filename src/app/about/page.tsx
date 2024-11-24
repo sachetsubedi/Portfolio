@@ -14,7 +14,7 @@ const Page = () => {
 
   return (
     <div className="flex justify-center">
-      <div className="w-1/2">
+      <div className=" w-full lg:w-1/2">
         <Tabs
           value={tabValue}
           sx={{
@@ -24,8 +24,12 @@ const Page = () => {
             },
             fontFamily: "inherit",
             marginTop: "10rem",
+
             "& .MuiTabs-flexContainer": {
               gap: 3,
+              "@media (max-width: 600px)": {
+                gap: 0, // Adjust gap for mobile
+              },
             },
           }}
         >
@@ -49,6 +53,9 @@ const Page = () => {
               fontWeight: "bold",
               fontFamily: "inherit",
               fontSize: "1.125rem",
+              "@media (max-width: 600px)": {
+                fontSize: "0.8rem",
+              },
               letterSpacing: "0.05em",
             }}
           />
@@ -70,6 +77,9 @@ const Page = () => {
               fontWeight: "bold",
               fontFamily: "inherit",
               fontSize: "1.125rem",
+              "@media (max-width: 600px)": {
+                fontSize: "0.8rem",
+              },
               letterSpacing: "0.05em",
             }}
           />
@@ -89,6 +99,9 @@ const Page = () => {
               fontWeight: "bold",
               fontFamily: "inherit",
               fontSize: "1.125rem",
+              "@media (max-width: 600px)": {
+                fontSize: "0.8rem",
+              },
               letterSpacing: "0.05em",
             }}
           />

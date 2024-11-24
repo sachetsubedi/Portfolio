@@ -6,8 +6,8 @@ import TechStackCard from "./TechStackCard";
 const TechStack: FC<{ hidden: boolean }> = ({ hidden }) => {
   return (
     <div hidden={hidden}>
-      <Card className="bg-transparent border-none mt-10 shadow-none">
-        <CardContent className="p-0">
+      <Card className="bg-transparent border-none mt-10 shadow-none ">
+        <CardContent className="p-0 ">
           {techStack.map((stack) => {
             return (
               <div key={stack.topic}>
@@ -16,7 +16,7 @@ const TechStack: FC<{ hidden: boolean }> = ({ hidden }) => {
                     {stack.topic}
                   </CardTitle>
                 </CardHeader>
-                <div className="flex flex-wrap ">
+                <div className="flex flex-wrap justify-center lg:justify-normal">
                   {stack.items.map((item) => {
                     return (
                       <TechStackCard
