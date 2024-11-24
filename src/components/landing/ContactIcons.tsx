@@ -5,6 +5,7 @@ const ContactIcons = () => {
   return (
     <div className="pt-5 flex gap-2 flex-wrap">
       <HoverEffect
+        className={`flex`}
         items={[
           {
             title: "",
