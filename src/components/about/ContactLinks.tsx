@@ -1,9 +1,11 @@
 "use client";
 import { contactSchema } from "@/schema/contact.schema";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { Icon } from "@iconify/react/dist/iconify.js";
 import { useMutation } from "@tanstack/react-query";
 import axios from "axios";
 import { useForm } from "react-hook-form";
+import { toast } from "sonner";
 import { Button } from "../ui/button";
 import { Input } from "../ui/input";
 import { Label } from "../ui/label";
@@ -22,8 +24,10 @@ const ContactLinks = () => {
           message: contactForm.getValues("message"),
         }
       );
-
       return response.data;
+    },
+    onSuccess: () => {
+      toast.success("Got your message! Keep kooking for mine.");
     },
   });
 
@@ -69,8 +73,16 @@ const ContactLinks = () => {
           </Label>
         </div>
 
-        <Button variant={"outline"} type="submit">
-          Submit
+        <Button
+          variant={"outline"}
+          type="submit"
+          disabled={submitMutation.isPending || submitMutation.isSuccess}
+        >
+          {submitMutation.isPending ? (
+            <Icon icon="svg-spinners:ring-resize" />
+          ) : (
+            "Submit"
+          )}
         </Button>
       </form>
     </div>
