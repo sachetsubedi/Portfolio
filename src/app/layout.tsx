@@ -9,6 +9,8 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Sachet Subedi",
   description: "Portfolio of Sachet Subedi",
+  keywords:
+    "Sachet Subedi, Portfolio, Developer, Designer, Full Stack Developer, Frontend Developer, Backend Developer, UI/UX Designer, Sachet, Subedi",
 };
 
 export default function RootLayout({
