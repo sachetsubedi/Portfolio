@@ -30,6 +30,7 @@ const Page = () => {
           }}
         >
           <Tab
+            value={0}
             label={
               <TabItem
                 icon="solar:laptop-minimalistic-bold"
@@ -53,6 +54,7 @@ const Page = () => {
           />
 
           <Tab
+            value={1}
             label={
               <TabItem icon="solar:code-square-bold" label="Projects"></TabItem>
             }
@@ -73,6 +75,7 @@ const Page = () => {
           />
 
           <Tab
+            value={2}
             label={<TabItem icon="solar:phone-bold" label="Contact"></TabItem>}
             onClick={() => {
               setTabValue(2);
