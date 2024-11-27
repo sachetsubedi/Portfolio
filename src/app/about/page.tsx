@@ -1,4 +1,5 @@
 "use client";
+import ContactCard from "@/components/about/ContactCard";
 import Projects from "@/components/about/Projects";
 import TabItem from "@/components/about/TabItem";
 import TechStack from "@/components/about/TechStack";
@@ -69,9 +70,28 @@ const Page = () => {
               letterSpacing: "0.05em",
             }}
           />
+
+          <Tab
+            label={<TabItem icon="solar:phone-bold" label="Contact"></TabItem>}
+            onClick={() => {
+              setTabValue(2);
+            }}
+            sx={{
+              textTransform: "none",
+              color: "gray",
+              "&.Mui-selected": {
+                color: theme.resolvedTheme == "light" ? "black" : "white",
+              },
+              fontWeight: "bold",
+              fontFamily: "inherit",
+              fontSize: "1.125rem",
+              letterSpacing: "0.05em",
+            }}
+          />
         </Tabs>
         <TechStack hidden={tabValue != 0}></TechStack>
         <Projects hidden={tabValue != 1}></Projects>
+        <ContactCard hidden={tabValue != 2}></ContactCard>
       </div>
     </div>
     // </BackgroundBeamsWithCollision>
