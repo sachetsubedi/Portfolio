@@ -84,7 +84,7 @@ export default function IconCloud({ iconSlugs }: DynamicCloudProps) {
   if (!isClient) return null; // Prevent SSR mismatch
 
   return (
-    // @ts-ignore
+    // @ts-expect-error - `canvasProps` is not in the types
     <Cloud {...cloudProps} canvasProps={{ className: "h-[350px]" }}>
       <>{renderedIcons}</>
     </Cloud>
