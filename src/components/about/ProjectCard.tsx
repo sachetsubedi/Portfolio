@@ -16,7 +16,7 @@ const ProjectCard: FC<{
 }> = ({ title, description, demoUrl, githubUrl, img, techStacks }) => {
   return (
     <Card className="grid grid-cols-8 bg-transparent border-2 border-black dark:border-white">
-      <div className="m-2 col-span-4 sm:col-span-4">
+      <div className="m-2 col-span-8 md:col-span-4 sm:col-span-4">
         <Image
           src={img || ""}
           alt="img"
@@ -26,7 +26,7 @@ const ProjectCard: FC<{
         ></Image>
       </div>
 
-      <div className="flex flex-col justify-between  col-span-4">
+      <div className="flex flex-col justify-between col-span-8 md:col-span-4">
         <div>
           <CardHeader>
             <CardTitle className="font-bold tracking-widest">{title}</CardTitle>
