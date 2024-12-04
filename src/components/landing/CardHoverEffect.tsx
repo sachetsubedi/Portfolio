@@ -15,6 +15,7 @@ export const HoverEffect = ({
     link: string;
     icon?: React.ReactNode;
     tooltip?: string;
+    iconText?: string;
   }[];
   className?: string;
 }) => {
@@ -62,7 +63,14 @@ export const HoverEffect = ({
                     <CardDescription>{item.description}</CardDescription>
                   </>
                 )}
-                {item.icon}
+                <div className="flex justify-center items-center gap-2">
+                  {item.icon}{" "}
+                  {item.iconText && (
+                    <span className="font-bold text-sm mr-1">
+                      {item.iconText || ""}
+                    </span>
+                  )}
+                </div>
               </Card>
             </TooltipTrigger>
             {!item.link && (

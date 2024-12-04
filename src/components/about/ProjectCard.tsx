@@ -13,18 +13,18 @@ const ProjectCard: FC<{
   img: string;
 }> = ({ title, description, demoUrl, githubUrl, img }) => {
   return (
-    <Card className="grid grid-cols-4 bg-transparent border-2 border-black dark:border-white">
-      <div className="m-2 col-span-1">
+    <Card className="grid grid-cols-8 bg-transparent border-2 border-black dark:border-white">
+      <div className="m-2 col-span-4 sm:col-span-4">
         <Image
           src={img || ""}
           alt="img"
-          width={400}
-          height={400}
+          width={600}
+          height={600}
           className="w-full h-full rounded-md"
         ></Image>
       </div>
 
-      <div className="flex justify-between col-span-3">
+      <div className="flex flex-col justify-between  col-span-4">
         <div>
           <CardHeader>
             <CardTitle className="font-bold tracking-widest">{title}</CardTitle>
@@ -33,9 +33,9 @@ const ProjectCard: FC<{
             <span>{description}</span>
           </CardContent>
         </div>
-        <div className="w-fit flex justify-center items-center mr-2">
+        <div className="w-fit flex justify-center items-center mr-2 mb-3">
           <HoverEffect
-            className=" h-fit p-0 flex flex-col "
+            className=" h-fit p-0 flex "
             items={[
               {
                 title: "",
@@ -43,6 +43,7 @@ const ProjectCard: FC<{
                 link: githubUrl || "",
                 icon: <Icon icon={"mdi:github"}></Icon>,
                 tooltip: "Github",
+                iconText: "Github",
               },
               {
                 title: "",
@@ -50,6 +51,7 @@ const ProjectCard: FC<{
                 link: demoUrl || "",
                 icon: <Icon icon={"mdi:globe"}></Icon>,
                 tooltip: "Demo",
+                iconText: "Demo",
               },
             ]}
           ></HoverEffect>
