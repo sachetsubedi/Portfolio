@@ -36,6 +36,9 @@ export const HoverEffect = ({
           className="relative group block p-2 h-full w-full"
           onMouseEnter={() => setHoveredIndex(idx)}
           onMouseLeave={() => setHoveredIndex(null)}
+          onClick={(e) => {
+            if (!item.link) e.preventDefault();
+          }}
         >
           <Tooltip delayDuration={10}>
             <TooltipTrigger className="pb-0 p-0 h-fit w-fit flex justify-center items-center">
