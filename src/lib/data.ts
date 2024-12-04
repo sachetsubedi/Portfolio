@@ -38,6 +38,7 @@ export const projects: {
   description: string;
   demoUrl?: string;
   githubUrl?: string;
+  img: string;
 }[] = [
   {
     title: "CLI chat application",
@@ -45,35 +46,42 @@ export const projects: {
     githubUrl: "https://github.com/sachetsubedi/chat-CLI",
     description:
       "A CLI chat application built with ExpressJs and Socket.io in a terminal theme.",
+    img: "/projects/cli.png",
   },
+
   {
     title: "Sorting Visaulaizer",
     demoUrl: "https://vis.sachetsubedi001.com.np",
     githubUrl: "",
     description: "A visualizer that visualizes working of sorting algorithms.",
+    img: "/projects/sort.png",
   },
   {
     title: "Image Analyzer",
     demoUrl: "https://analyze.sachetsubedi001.com.np",
     githubUrl: "https://github.com/sachetsubedi/image-analyzer",
     description: "An AI powered image analyzer. ",
+    img: "/projects/analyze.png",
   },
   {
     title: "Links Shortner",
     githubUrl: "https://github.com/sachetsubedi/links-shortner",
     description: "Your very own link shortner ready to be deployed.",
+    img: "/projects/links.png",
   },
   {
     title: "To Do List",
     githubUrl: "https://github.com/sachetsubedi/To-Do-List",
     demoUrl: "https://todo.sachetsubedi001.com.np",
     description: "A simple to do list to track your tasks.",
+    img: "/projects/todo.png",
   },
   {
     title: "Text Cryptography",
     githubUrl: "https://github.com/sachetsubedi/Text-Encryption",
     description:
       "Simple text encryption and decryption programs with different methods.",
+    img: "/projects/crypto.png",
   },
 ];
 
