@@ -4,6 +4,7 @@ import Image from "next/image";
 import { FC } from "react";
 import { HoverEffect } from "../landing/CardHoverEffect";
 import { Card, CardContent, CardHeader, CardTitle } from "../ui/card";
+import SkillLabels from "./SkillLabels";
 
 const ProjectCard: FC<{
   title: string;
@@ -11,7 +12,8 @@ const ProjectCard: FC<{
   demoUrl?: string;
   githubUrl?: string;
   img: string;
-}> = ({ title, description, demoUrl, githubUrl, img }) => {
+  techStacks: { title: string; color: string }[];
+}> = ({ title, description, demoUrl, githubUrl, img, techStacks }) => {
   return (
     <Card className="grid grid-cols-8 bg-transparent border-2 border-black dark:border-white">
       <div className="m-2 col-span-4 sm:col-span-4">
@@ -29,8 +31,9 @@ const ProjectCard: FC<{
           <CardHeader>
             <CardTitle className="font-bold tracking-widest">{title}</CardTitle>
           </CardHeader>
-          <CardContent className="flex justify-between">
+          <CardContent className="flex justify-between flex-col gap-2">
             <span>{description}</span>
+            <SkillLabels items={techStacks}></SkillLabels>
           </CardContent>
         </div>
         <div className="w-fit flex justify-center items-center mr-2 mb-3">

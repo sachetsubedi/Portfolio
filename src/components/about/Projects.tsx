@@ -20,6 +20,7 @@ const Projects: FC<{ hidden: boolean }> = ({ hidden }) => {
                 description={project.description}
                 demoUrl={project.demoUrl}
                 githubUrl={project.githubUrl}
+                techStacks={project.techStacks}
               />
             </div>
           );

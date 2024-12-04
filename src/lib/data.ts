@@ -33,12 +33,38 @@ export const globeSlugs = [
   "markdown",
 ];
 
+export const E_SKILLCOLORS = {
+  html: "bg-red-500",
+  css: "bg-blue-500",
+  js: "bg-yellow-500",
+  typescript: "bg-blue-700",
+  react: "bg-cyan-500",
+  nextjs: "bg-gray-900",
+  prisma: "bg-indigo-500",
+  mysql: "bg-orange-500",
+  azure: "bg-blue-500",
+  docker: "bg-teal-500",
+  redux: "bg-purple-500",
+  zustand: "bg-green-600",
+  jest: "bg-pink-500",
+  cypress: "bg-green-500",
+  graphql: "bg-purple-700",
+  tailwindcss: "bg-sky-500",
+  octave: "bg-gray-700",
+  express: "bg-gray-800",
+  matterjs: "bg-yellow-600",
+  mui: "bg-blue-400",
+  workflows: "bg-gray-600",
+  socketio: "bg-black",
+};
+
 export const projects: {
   title: string;
   description: string;
   demoUrl?: string;
   githubUrl?: string;
   img: string;
+  techStacks: { title: string; color: string }[];
 }[] = [
   {
     title: "CLI chat application",
@@ -47,6 +73,13 @@ export const projects: {
     description:
       "A CLI chat application built with ExpressJs and Socket.io in a terminal theme.",
     img: "/projects/cli.png",
+    techStacks: [
+      { title: "Express js", color: E_SKILLCOLORS.express },
+      { title: "Socket.io", color: E_SKILLCOLORS.socketio },
+      { title: "HTML", color: E_SKILLCOLORS.html },
+      { title: "CSS", color: E_SKILLCOLORS.css },
+      { title: "JavaScript", color: E_SKILLCOLORS.js },
+    ],
   },
 
   {
@@ -55,6 +88,7 @@ export const projects: {
     githubUrl: "",
     description: "A visualizer that visualizes working of sorting algorithms.",
     img: "/projects/sort.png",
+    techStacks: [{ title: "Next js", color: E_SKILLCOLORS.nextjs }],
   },
   {
     title: "Image Analyzer",
@@ -62,12 +96,24 @@ export const projects: {
     githubUrl: "https://github.com/sachetsubedi/image-analyzer",
     description: "An AI powered image analyzer. ",
     img: "/projects/analyze.png",
+    techStacks: [
+      { title: "Express js", color: E_SKILLCOLORS.express },
+      { title: "Azure computer vision", color: E_SKILLCOLORS.socketio },
+      { title: "HTML", color: E_SKILLCOLORS.html },
+      { title: "CSS", color: E_SKILLCOLORS.css },
+      { title: "JavaScript", color: E_SKILLCOLORS.js },
+    ],
   },
   {
     title: "Links Shortner",
     githubUrl: "https://github.com/sachetsubedi/links-shortner",
     description: "Your very own link shortner ready to be deployed.",
     img: "/projects/links.png",
+    techStacks: [
+      { title: "Express js", color: E_SKILLCOLORS.express },
+      { title: "Mysql", color: E_SKILLCOLORS.mysql },
+      { title: "Prisma", color: E_SKILLCOLORS.prisma },
+    ],
   },
   {
     title: "To Do List",
@@ -75,6 +121,11 @@ export const projects: {
     demoUrl: "https://todo.sachetsubedi001.com.np",
     description: "A simple to do list to track your tasks.",
     img: "/projects/todo.png",
+    techStacks: [
+      { title: "HTML", color: E_SKILLCOLORS.html },
+      { title: "Css", color: E_SKILLCOLORS.css },
+      { title: "JavaScript", color: E_SKILLCOLORS.js },
+    ],
   },
   {
     title: "Text Cryptography",
@@ -82,6 +133,7 @@ export const projects: {
     description:
       "Simple text encryption and decryption programs with different methods.",
     img: "/projects/crypto.png",
+    techStacks: [{ title: "C++", color: E_SKILLCOLORS.azure }],
   },
 ];
 
