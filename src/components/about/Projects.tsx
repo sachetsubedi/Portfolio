@@ -15,6 +15,7 @@ const Projects: FC<{ hidden: boolean }> = ({ hidden }) => {
           return (
             <div key={idx}>
               <ProjectCard
+                img={project.img}
                 title={project.title}
                 description={project.description}
                 demoUrl={project.demoUrl}
