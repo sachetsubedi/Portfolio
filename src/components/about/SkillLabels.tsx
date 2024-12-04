@@ -8,7 +8,7 @@ const SkillLabels: FC<{
   }[];
 }> = ({ items }) => {
   return (
-    <div className="flex gap-2 flex-wrap">
+    <div className="flex gap-2 flex-wrap mt-2">
       {items.map((item, idx) => {
         return <Label key={idx} color={item.color} title={item.title} />;
       })}
