@@ -16,7 +16,7 @@ import { usePathname } from "next/navigation";
 import { Tooltip, TooltipContent, TooltipTrigger } from "../ui/tooltip";
 
 export function ModeToggle() {
-  const { setTheme } = useTheme();
+  const { setTheme, theme } = useTheme();
 
   const pathname = usePathname();
 
@@ -44,7 +44,7 @@ export function ModeToggle() {
         <Tooltip delayDuration={10}>
           <TooltipTrigger
             asChild
-            className="absolute top-3 right-10  z-[1000000]"
+            className="absolute top-3 right-5 md:right-10  z-[1000000]"
           >
             <DropdownMenuTrigger asChild>
               <Button variant="outline" size="icon">
@@ -60,21 +60,27 @@ export function ModeToggle() {
         </Tooltip>
         <DropdownMenuContent align="end" className="z-[1000000]">
           <DropdownMenuItem
-            className="font-bold cursor-pointer"
+            className={`font-bold cursor-pointer ${
+              theme === "light" ? "bg-accent" : ""
+            }`}
             onClick={() => setTheme("light")}
           >
             <Icon icon="solar:sun-2-linear" width="24" height="24" />
             Burn my eye
           </DropdownMenuItem>
           <DropdownMenuItem
-            className="font-bold cursor-pointer"
+            className={`font-bold cursor-pointer ${
+              theme === "dark" ? " dark:bg-accent" : ""
+            }`}
             onClick={() => setTheme("dark")}
           >
             <Icon icon="solar:moon-line-duotone" width="24" height="24" />
             Peace
           </DropdownMenuItem>
           <DropdownMenuItem
-            className="font-bold cursor-pointer"
+            className={`font-bold cursor-pointer ${
+              theme === "system" ? " dark:bg-accent" : ""
+            }`}
             onClick={() => setTheme("system")}
           >
             <Icon
