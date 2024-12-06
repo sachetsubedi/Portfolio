@@ -36,7 +36,7 @@ const ProjectCard: FC<{
             <SkillLabels items={techStacks}></SkillLabels>
           </CardContent>
         </div>
-        <div className="w-fit flex justify-center items-center mr-2 mb-3">
+        <div className="w-fit flex justify-center items-center mr-2 mb-3 pl-3">
           <HoverEffect
             className=" h-fit p-0 flex "
             items={[
