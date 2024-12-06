@@ -12,7 +12,6 @@ const Page = () => {
   const [isClient, setIsClient] = useState(false);
 
   const theme = useTheme();
-  console.log(theme.resolvedTheme);
 
   // Set isClient to true once the component has been hydrated on the client side
   useEffect(() => {
@@ -21,7 +20,7 @@ const Page = () => {
 
   // Avoid rendering if the theme is not yet resolved
   if (!isClient) {
-    return null; // Or a loading spinner while the theme is being determined
+    return null;
   }
 
   return (
