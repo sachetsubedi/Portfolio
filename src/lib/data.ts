@@ -158,7 +158,7 @@ export const techStack = [
       { icon: "simple-icons:express", title: "Express" },
       { icon: "mdi:nodejs", title: "Node.js" },
       { icon: "simple-icons:socketdotio", title: "Socket.io" },
-      { icon: "simple-icons:tailwindcss", title: "Tailwind CSS" },
+      { icon: "simple-icons:tailwindcss", title: "Tailwind" },
       { icon: "simple-icons:mui", title: "Material UI" },
       { icon: "simple-icons:bootstrap", title: "Bootstrap" },
       { icon: "simple-icons:vite", title: "Vite" },

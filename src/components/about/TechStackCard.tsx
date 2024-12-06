@@ -12,7 +12,9 @@ const TechStackCard: FC<{
         <Card className="border-2 border-black dark:border-white rounded-xl w-20 aspect-square flex flex-col items-center justify-center">
           <Icon icon={icon} className="text-3xl" />
           <CardHeader className="m-0 p-1">
-            <CardTitle className="text-[10px] font-bold">{title}</CardTitle>
+            <CardTitle className="text-[10px] font-bold tracking-widest">
+              {title}
+            </CardTitle>
           </CardHeader>
         </Card>
       </CardContent>

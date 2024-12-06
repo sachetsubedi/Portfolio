@@ -29,7 +29,7 @@ const ProjectCard: FC<{
       <div className="flex flex-col justify-between col-span-8 md:col-span-4">
         <div>
           <CardHeader>
-            <CardTitle className="font-bold">{title}</CardTitle>
+            <CardTitle className="font-bold tracking-widest">{title}</CardTitle>
           </CardHeader>
           <CardContent className="flex justify-between flex-col gap-2">
             <span>{description}</span>

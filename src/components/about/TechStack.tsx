@@ -12,7 +12,9 @@ const TechStack: FC<{ hidden: boolean }> = ({ hidden }) => {
             return (
               <div key={stack.topic}>
                 <CardHeader>
-                  <CardTitle className="text-lg r">{stack.topic}</CardTitle>
+                  <CardTitle className="text-lg tracking-widest">
+                    {stack.topic}
+                  </CardTitle>
                 </CardHeader>
                 <div className="flex flex-wrap justify-center lg:justify-normal">
                   {stack.items.map((item) => {

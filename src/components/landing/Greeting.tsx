@@ -13,7 +13,7 @@ const Greeting = () => {
         <ContactIcons></ContactIcons>
         <div>
           <Link href={"/about"} className="p-2 md:p-0">
-            <Button variant={"outline"} className="font-bold">
+            <Button variant={"outline"} className="font-bold tracking-wider">
               About Me
             </Button>
           </Link>
