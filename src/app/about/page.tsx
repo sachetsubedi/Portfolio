@@ -38,7 +38,7 @@ const Page = () => {
             label={
               <TabItem
                 icon="solar:laptop-minimalistic-bold"
-                label="Tech Stack"
+                label="Projects"
               ></TabItem>
             }
             onClick={() => {
@@ -63,7 +63,10 @@ const Page = () => {
           <Tab
             value={1}
             label={
-              <TabItem icon="solar:code-square-bold" label="Projects"></TabItem>
+              <TabItem
+                icon="solar:code-square-bold"
+                label="Tech Stack"
+              ></TabItem>
             }
             onClick={() => {
               setTabValue(1);
@@ -106,8 +109,8 @@ const Page = () => {
             }}
           />
         </Tabs>
-        <TechStack hidden={tabValue != 0}></TechStack>
-        <Projects hidden={tabValue != 1}></Projects>
+        <Projects hidden={tabValue != 0}></Projects>
+        <TechStack hidden={tabValue != 1}></TechStack>
         <ContactCard hidden={tabValue != 2}></ContactCard>
         <Toaster position="top-center" />
       </div>
