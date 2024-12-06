@@ -7,7 +7,7 @@ const ContactCard: FC<{ hidden: boolean }> = ({ hidden }) => {
     <div hidden={hidden} className="mt-20">
       <Card className="shadow-none border-none">
         <CardHeader>
-          <CardTitle className="tracking-wider mb-5">
+          <CardTitle className=" mb-5">
             Don&apos;t hesitate to drop me a line
           </CardTitle>
         </CardHeader>

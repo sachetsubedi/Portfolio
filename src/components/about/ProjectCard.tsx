@@ -29,7 +29,7 @@ const ProjectCard: FC<{
       <div className="flex flex-col justify-between col-span-8 md:col-span-4">
         <div>
           <CardHeader>
-            <CardTitle className="font-bold tracking-widest">{title}</CardTitle>
+            <CardTitle className="font-bold">{title}</CardTitle>
           </CardHeader>
           <CardContent className="flex justify-between flex-col gap-2">
             <span>{description}</span>
@@ -45,7 +45,6 @@ const ProjectCard: FC<{
                 description: "",
                 link: githubUrl || "",
                 icon: <Icon icon={"mdi:github"}></Icon>,
-                tooltip: "Github",
                 iconText: "Github",
               },
               {
@@ -53,7 +52,6 @@ const ProjectCard: FC<{
                 description: "",
                 link: demoUrl || "",
                 icon: <Icon icon={"mdi:globe"}></Icon>,
-                tooltip: "Demo",
                 iconText: "Demo",
               },
             ]}

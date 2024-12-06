@@ -9,9 +9,7 @@ const Greeting = () => {
       <div className="left text-4xl font-extrabold">
         Hi, I&apos;m Sachet Subedi 👋
         <br />
-        <span className="text-sm font-bold tracking-wider ">
-          I build things for the web.
-        </span>
+        <span className="text-sm font-bold ">I build things for the web.</span>
         <ContactIcons></ContactIcons>
         <div>
           <Link href={"/about"} className="p-2 md:p-0">

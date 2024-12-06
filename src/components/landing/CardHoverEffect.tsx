@@ -77,13 +77,13 @@ export const HoverEffect = ({
               </Card>
             </TooltipTrigger>
             {!item.link && (
-              <TooltipContent className="font-bold tracking-widest flex items-center justify-center gap-2">
+              <TooltipContent className="font-bold flex items-center justify-center gap-2">
                 <Icon icon="typcn:warning" fontSize={15} />
                 Not available
               </TooltipContent>
             )}
             {item.tooltip && item.link && (
-              <TooltipContent className="font-bold tracking-widest flex items-center justify-center gap-2">
+              <TooltipContent className="font-bold  flex items-center justify-center gap-2">
                 {item.tooltip}
               </TooltipContent>
             )}
@@ -122,7 +122,7 @@ export const CardTitle = ({
   children: React.ReactNode;
 }) => {
   return (
-    <h4 className={cn("text-zinc-100 font-bold tracking-wide mt-4", className)}>
+    <h4 className={cn("text-zinc-100 font-bold  mt-4", className)}>
       {children}
     </h4>
   );
@@ -135,12 +135,7 @@ export const CardDescription = ({
   children: React.ReactNode;
 }) => {
   return (
-    <p
-      className={cn(
-        "mt-8 text-zinc-400 tracking-wide leading-relaxed text-sm",
-        className
-      )}
-    >
+    <p className={cn("mt-8 text-zinc-400  leading-relaxed text-sm", className)}>
       {children}
     </p>
   );

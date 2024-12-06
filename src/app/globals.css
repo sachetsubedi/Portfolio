@@ -73,6 +73,7 @@ body {
 @layer base {
   * {
     @apply border-border;
+    @apply tracking-widest;
   }
   body {
     @apply bg-background text-foreground;
