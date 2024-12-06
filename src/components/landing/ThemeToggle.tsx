@@ -66,7 +66,7 @@ export function ModeToggle() {
             onClick={() => setTheme("light")}
           >
             <Icon icon="solar:sun-2-linear" width="24" height="24" />
-            Burn my eye
+            Burn my eyes
           </DropdownMenuItem>
           <DropdownMenuItem
             className={`font-bold cursor-pointer ${
