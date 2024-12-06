@@ -6,11 +6,23 @@ import TechStack from "@/components/about/TechStack";
 import { Toaster } from "@/components/ui/sonner";
 import { Tab, Tabs } from "@mui/material";
 import { useTheme } from "next-themes";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 const Page = () => {
   const [tabValue, setTabValue] = useState(0);
+  const [isClient, setIsClient] = useState(false);
 
   const theme = useTheme();
+  console.log(theme.resolvedTheme);
+
+  // Set isClient to true once the component has been hydrated on the client side
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
+  // Avoid rendering if the theme is not yet resolved
+  if (!isClient) {
+    return null; // Or a loading spinner while the theme is being determined
+  }
 
   return (
     <div className="flex justify-center">
