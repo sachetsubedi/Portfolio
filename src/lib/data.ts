@@ -193,7 +193,6 @@ export const techStack = [
     items: [
       { icon: "simple-icons:git", title: "Git" },
       { icon: "simple-icons:github", title: "GitHub" },
-      { icon: "simple-icons:gitlab", title: "GitLab" },
       { icon: "simple-icons:docker", title: "Docker" },
       { icon: "simple-icons:jira", title: "Jira" },
       { icon: "simple-icons:trello", title: "Trello" },

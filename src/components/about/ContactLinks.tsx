@@ -45,7 +45,7 @@ const ContactLinks = () => {
   });
 
   return (
-    <div className=" flex flex-col gap-3">
+    <div className=" flex flex-col gap-3 bg-inherit">
       <form onSubmit={contactForm.handleSubmit(onsubmit)}>
         <div className="flex justify-between">
           <div className="w-[48%] flex flex-col gap-2">
