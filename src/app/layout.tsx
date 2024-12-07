@@ -23,7 +23,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className="relative">
         <QueryProviderWrapper>
-          <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
             <ProgressProvider></ProgressProvider>
             <TooltipProvider>
               <ModeToggle></ModeToggle>
