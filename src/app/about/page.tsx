@@ -1,5 +1,6 @@
 "use client";
 import ContactCard from "@/components/about/ContactCard";
+import OverviewCard from "@/components/about/OverviewCard";
 import Projects from "@/components/about/Projects";
 import TabItem from "@/components/about/TabItem";
 import TechStack from "@/components/about/TechStack";
@@ -46,12 +47,7 @@ const Page = () => {
         >
           <Tab
             value={0}
-            label={
-              <TabItem
-                icon="solar:laptop-minimalistic-bold"
-                label="Projects"
-              ></TabItem>
-            }
+            label={<TabItem icon="solar:user-bold" label="Overview"></TabItem>}
             onClick={() => {
               setTabValue(0);
             }}
@@ -75,8 +71,8 @@ const Page = () => {
             value={1}
             label={
               <TabItem
-                icon="solar:code-square-bold"
-                label="Tech Stack"
+                icon="solar:laptop-minimalistic-bold"
+                label="Projects"
               ></TabItem>
             }
             onClick={() => {
@@ -100,7 +96,12 @@ const Page = () => {
 
           <Tab
             value={2}
-            label={<TabItem icon="solar:phone-bold" label="Contact"></TabItem>}
+            label={
+              <TabItem
+                icon="solar:code-square-bold"
+                label="Tech Stack"
+              ></TabItem>
+            }
             onClick={() => {
               setTabValue(2);
             }}
@@ -119,10 +120,33 @@ const Page = () => {
               letterSpacing: "0.05em",
             }}
           />
+
+          <Tab
+            value={3}
+            label={<TabItem icon="solar:phone-bold" label="Contact"></TabItem>}
+            onClick={() => {
+              setTabValue(3);
+            }}
+            sx={{
+              textTransform: "none",
+              color: "gray",
+              "&.Mui-selected": {
+                color: theme.resolvedTheme == "light" ? "black" : "white",
+              },
+              fontWeight: "bold",
+              fontFamily: "inherit",
+              fontSize: "1.125rem",
+              "@media (max-width: 600px)": {
+                fontSize: "0.8rem",
+              },
+              letterSpacing: "0.05em",
+            }}
+          />
         </Tabs>
-        <Projects hidden={tabValue != 0}></Projects>
-        <TechStack hidden={tabValue != 1}></TechStack>
-        <ContactCard hidden={tabValue != 2}></ContactCard>
+        <OverviewCard hidden={tabValue != 0}></OverviewCard>
+        <Projects hidden={tabValue != 1}></Projects>
+        <TechStack hidden={tabValue != 2}></TechStack>
+        <ContactCard hidden={tabValue != 3}></ContactCard>
         <Toaster position="top-center" />
       </div>
     </div>
