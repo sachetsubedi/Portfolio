@@ -204,3 +204,18 @@ export const techStack = [
     ],
   },
 ];
+
+export const experiences: {
+  title: string;
+  description: string;
+  starDate: string;
+  endDate?: string;
+  titlePreview?: { url: string };
+}[] = [
+  {
+    title: "Velorona LLC",
+    description: "Full Stack Developer",
+    starDate: "01 April 2024",
+    titlePreview: { url: "https://velorona.com" },
+  },
+];
