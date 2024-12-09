@@ -1,6 +1,7 @@
 import { CardContent } from "@mui/material";
 import { FC } from "react";
 import { Card } from "../ui/card";
+import Education from "./Education";
 import Experience from "./Experience";
 
 const OverviewCard: FC<{ hidden: boolean }> = ({ hidden }) => {
@@ -18,6 +19,8 @@ const OverviewCard: FC<{ hidden: boolean }> = ({ hidden }) => {
         </div>
 
         <Experience />
+
+        <Education />
       </CardContent>
     </Card>
   );

@@ -219,3 +219,18 @@ export const experiences: {
     titlePreview: { url: "https://velorona.com" },
   },
 ];
+
+export const educations: {
+  title: string;
+  description: string;
+  starDate: string;
+  endDate?: string;
+  titlePreview?: { url: string };
+}[] = [
+  {
+    title: "Tribhuwan University",
+    description: "Bachelor in Computer Science and information technology",
+    starDate: "01 March 2022",
+    titlePreview: { url: "https://tu.edu.np" },
+  },
+];

@@ -9,7 +9,7 @@ const Experience = () => {
         <CardHeader className="p-0 ">
           <CardTitle className="tracking-widest text-lg">Experience</CardTitle>
         </CardHeader>
-        <CardContent className="p-0 pt-7">
+        <CardContent className="pt-7">
           {experiences.map((experience, idx) => {
             return (
               <TimeStamp
