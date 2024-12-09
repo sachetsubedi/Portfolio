@@ -35,7 +35,7 @@ const Page = () => {
                 theme.resolvedTheme == "light" ? "black" : "white",
             },
             fontFamily: "inherit",
-            marginTop: "10rem",
+            // marginTop: "10rem",
 
             "& .MuiTabs-flexContainer": {
               gap: 3,
