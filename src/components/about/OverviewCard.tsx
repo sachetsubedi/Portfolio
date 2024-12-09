@@ -6,12 +6,9 @@ import Experience from "./Experience";
 
 const OverviewCard: FC<{ hidden: boolean }> = ({ hidden }) => {
   return (
-    <Card
-      hidden={hidden}
-      className="mt-20 text-justify bg-inherit border-none shadow-none"
-    >
+    <Card hidden={hidden} className="mt-20  bg-inherit border-none shadow-none">
       <CardContent>
-        <div>
+        <div className="text-justify">
           I&apos;m <strong> Sachet Subedi</strong>, a full-stack developer
           passionate about crafting clean, efficient code and building creative
           digital solutions. From interactive front-end designs to robust
