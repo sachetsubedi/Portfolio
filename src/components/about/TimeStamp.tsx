@@ -12,17 +12,16 @@ const TimeStamp: FC<{
   titlePreview?: { url: string };
 }> = ({ description, endDate, startDate, title, titlePreview }) => {
   const { screen } = useResponsive();
-  console.log(screen);
   return (
-    <Card className="border-none shadow-none bg-inherit flex flex-col md:flex-row gap-3 md:gap-10 ">
-      <div>
-        {screen !== "sm" && screen !== "xs" && (
-          <CardTitle className="tracking-widest text-sm md:text-lg">
-            {startDate} - {endDate ?? "Present"}
-          </CardTitle>
-        )}
+    <Card className="border-none shadow-none bg-inherit  gap-3 md:gap-10 grid grid-cols-12">
+      <div className="col-span-0 md:col-span-4 ">
+        <CardTitle
+          className={`hidden md:flex tracking-widest text-sm md:text-lg col `}
+        >
+          {startDate} - {endDate ?? "Present"}
+        </CardTitle>
       </div>
-      <div>
+      <div className="col-span-12 md:col-span-8 ">
         <CardTitle className="tracking-widest text-lg">
           {!titlePreview?.url ? (
             title
@@ -34,11 +33,9 @@ const TimeStamp: FC<{
         </CardTitle>
         <div>{description}</div>
 
-        {(screen == "sm" || "xs") && (
-          <CardTitle className="tracking-widest text-sm md:text-lg mt-3">
-            {startDate} - {endDate ?? "Present"}
-          </CardTitle>
-        )}
+        <CardTitle className="tracking-widest text-sm md:text-lg mt-3 md:hidden">
+          {startDate} - {endDate ?? "Present"}
+        </CardTitle>
       </div>
     </Card>
   );
