@@ -11,7 +11,7 @@ import { Input } from "../ui/input";
 import { Label } from "../ui/label";
 import { Textarea } from "../ui/textarea";
 
-const ContactLinks = () => {
+const ContactForm = () => {
   //   const theme = useTheme();
 
   const submitMutation = useMutation({
@@ -94,4 +94,4 @@ const ContactLinks = () => {
   );
 };
 
-export default ContactLinks;
+export default ContactForm;
