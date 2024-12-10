@@ -27,7 +27,12 @@ const ContactLinks = () => {
       return response.data;
     },
     onSuccess: () => {
-      toast.success("Got your message! Keep kooking for mine.");
+      toast.success("Got your message! Keep looking for mine.");
+    },
+    onError: () => {
+      toast.error(
+        "Something went wrong. Please try again later or contact me on social media."
+      );
     },
   });
 
