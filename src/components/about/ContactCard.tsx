@@ -1,6 +1,7 @@
 import { FC } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "../ui/card";
-import ContactForm from "./ContactLinks";
+import ContactForm from "./ContactForm";
+import ContactLinks from "./ContactLinks";
 
 const ContactCard: FC<{ hidden: boolean }> = ({ hidden }) => {
   return (
@@ -13,6 +14,7 @@ const ContactCard: FC<{ hidden: boolean }> = ({ hidden }) => {
         </CardHeader>
         <CardContent>
           <ContactForm />
+          <ContactLinks />
         </CardContent>
       </Card>
     </div>

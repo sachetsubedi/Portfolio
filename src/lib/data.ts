@@ -234,3 +234,21 @@ export const educations: {
     titlePreview: { url: "https://tu.edu.np" },
   },
 ];
+
+export const contacts: { icon: string; content: string; link: string }[] = [
+  {
+    icon: "fluent:mail-32-filled",
+    content: "mail@sachetsubedi001.com.np",
+    link: "mailto:mail@sachetsubedi001.com.np",
+  },
+  {
+    icon: "jam:github",
+    content: "github.sachetsubedi001.com.np",
+    link: "https://github.sachetsubedi001.com.np",
+  },
+  {
+    icon: "mdi:linkedin",
+    content: "ln.sachetsubedi001.com.np",
+    link: "https://ln.sachetsubedi001.com.np",
+  },
+];
