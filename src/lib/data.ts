@@ -81,7 +81,21 @@ export const projects: {
       { title: "JavaScript", color: E_SKILLCOLORS.js },
     ],
   },
-
+  {
+    title: "Bagh Chal",
+    demoUrl: "https://bagh-chal.sachetsubedi001.com.np",
+    githubUrl: "https://github.com/sachetsubedi/bagh-chal",
+    description:
+      "A multiplayer Bagh Chal game built with ExpressJs and Socket.io.",
+    img: "/projects/bagh-chal.png",
+    techStacks: [
+      { title: "Express js", color: E_SKILLCOLORS.express },
+      { title: "Socket.io", color: E_SKILLCOLORS.socketio },
+      { title: "NextJs", color: E_SKILLCOLORS.nextjs },
+      { title: "Prisma", color: E_SKILLCOLORS.prisma },
+      { title: "MySql", color: E_SKILLCOLORS.mysql },
+    ],
+  },
   {
     title: "Sorting Visaulaizer",
     demoUrl: "https://vis.sachetsubedi001.com.np",
