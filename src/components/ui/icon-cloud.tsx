@@ -117,7 +117,7 @@ export function IconCloud({ icons, images }: IconCloudProps) {
         y: y * 150,
         z: z * 150,
         scale: 1,
-        opacity: 1,
+        opacity: 2,
         id: i,
       });
     }
@@ -261,7 +261,7 @@ export function IconCloud({ icons, images }: IconCloudProps) {
         const rotatedZ = icon.x * sinY + icon.z * cosY;
         const rotatedY = icon.y * cosX + rotatedZ * sinX;
 
-        const scale = (rotatedZ + 200) / 300;
+        const scale = (rotatedZ + 200) / 250;
         // const opacity = Math.max(0.2, Math.min(1, (rotatedZ + 150) / 200));
         const opacity = 2;
 
