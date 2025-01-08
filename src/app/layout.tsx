@@ -22,6 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className="relative">
+        {/* <SplashCursor /> */}
         <QueryProviderWrapper>
           <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
             <ProgressProvider></ProgressProvider>
