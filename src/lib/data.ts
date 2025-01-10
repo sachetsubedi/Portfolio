@@ -33,6 +33,115 @@ export const globeSlugs = [
   "markdown",
 ];
 
+export const globeSlugsWithColor = [
+  {
+    slug: "typescript",
+  },
+  {
+    slug: "javascript",
+  },
+  {
+    slug: "react",
+  },
+  {
+    slug: "html5",
+  },
+  {
+    slug: "css3",
+  },
+  {
+    slug: "express",
+    color: "white",
+  },
+  {
+    slug: "prisma",
+    color: "white",
+  },
+  {
+    slug: "amazonaws",
+  },
+  {
+    slug: "firebase",
+  },
+  {
+    slug: "nginx",
+  },
+  {
+    slug: "vercel",
+    color: "white",
+  },
+  {
+    slug: "docker",
+  },
+  {
+    slug: "git",
+    color: "#F05032",
+  },
+  {
+    slug: "jira",
+    color: "#0052CC",
+  },
+  {
+    slug: "github",
+    color: "white",
+  },
+  {
+    slug: "gitlab",
+  },
+  {
+    slug: "visualstudiocode",
+  },
+  {
+    slug: "figma",
+  },
+  {
+    slug: "trello",
+  },
+  {
+    slug: "nodedotjs",
+  },
+  {
+    slug: "nodemon",
+  },
+  {
+    slug: "zod",
+  },
+  {
+    slug: "eslint",
+  },
+  {
+    slug: "nextdotjs",
+    color: "white",
+  },
+  {
+    slug: "cloudflare",
+  },
+  {
+    slug: "shadcnui",
+    color: "white",
+  },
+  {
+    slug: "tailwindcss",
+  },
+  {
+    slug: "mui",
+  },
+  {
+    slug: "socketdotio",
+    color: "white",
+  },
+  {
+    slug: "vite",
+  },
+  {
+    slug: "bootstrap",
+  },
+  {
+    slug: "markdown",
+    color: "white",
+  },
+];
+
 export const E_SKILLCOLORS = {
   html: "bg-red-500",
   css: "bg-blue-500",

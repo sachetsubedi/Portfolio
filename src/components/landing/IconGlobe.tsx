@@ -1,11 +1,21 @@
 "use client";
-import { globeSlugs } from "@/lib/data";
+import { globeSlugsWithColor } from "@/lib/data";
+import { useTheme } from "next-themes";
 import { IconCloud } from "../ui/icon-cloud";
 
 const IconGlobe = () => {
-  const images = globeSlugs.map(
-    (slug) => `https://cdn.simpleicons.org/${slug}/${slug}`
-  );
+  const theme = useTheme();
+
+  const getColor = (color: string | undefined) => {
+    if (!color) return null;
+    return theme.resolvedTheme === "dark" ? "white" : "black";
+  };
+
+  const images = globeSlugsWithColor.map((slug) => {
+    const color = getColor(slug.color);
+    return `https://cdn.simpleicons.org/${slug.slug}/${color}`;
+  });
+
   return (
     <div>
       <IconCloud images={images} />
