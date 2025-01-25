@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import Link from "next/link";
 import { Button } from "../ui/button";
 import ContactIcons from "./ContactIcons";
@@ -7,7 +8,20 @@ const Greeting = () => {
   return (
     <div className="flex justify-between items-center gap-24 p-5 md:p-0">
       <div className="left text-4xl font-extrabold">
-        Hi, I&apos;m Sachet Subedi 👋
+        <div className="flex gap-2">
+          Hi, I&apos;m Sachet Subedi
+          <motion.div
+            className=" w-fit"
+            whileHover={{
+              rotate: [0, 30, 0], // Rotate to 360 degrees and back to 0
+            }}
+            transition={{
+              duration: 0.5,
+            }}
+          >
+            👋
+          </motion.div>
+        </div>
         <br />
         <span className="text-sm font-bold ">I build things for the web.</span>
         <ContactIcons></ContactIcons>
