@@ -75,18 +75,32 @@ const Greeting = () => {
             👋
           </motion.div>
         </div>
-        <span className="text-sm font-bold ">I build things for the web.</span>
-        <ContactIcons></ContactIcons>
-        <div>
-          <Link href={"/about"} className="p-2 md:p-0">
-            <Button
-              variant={"outline"}
-              className="font-bold tracking-wider ml-2"
-            >
-              About Me
-            </Button>
-          </Link>
-        </div>
+        <motion.div
+          className="cursor-default text-[25px] md:text-4xl"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{
+            rotate: 0,
+            skew: 0,
+            scale: 1,
+            opacity: 1,
+            y: 0,
+          }}
+        >
+          <span className="text-sm font-bold ">
+            I build things for the web.
+          </span>
+          <ContactIcons></ContactIcons>
+          <div>
+            <Link href={"/about"} className="p-2 md:p-0">
+              <Button
+                variant={"outline"}
+                className="font-bold tracking-wider ml-2"
+              >
+                About Me
+              </Button>
+            </Link>
+          </div>
+        </motion.div>
       </div>
       <div className={`hidden md:block`}>
         <IconGlobe></IconGlobe>
