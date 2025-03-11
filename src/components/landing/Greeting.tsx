@@ -37,6 +37,7 @@ const Greeting = () => {
             <motion.div
               key={index}
               className="cursor-default text-[25px] md:text-4xl"
+              initial={{ opacity: 0, y: 20 }}
               whileHover={{
                 skew: [0, -10, 0],
                 scale: [1, 1.2, 1],
@@ -49,6 +50,8 @@ const Greeting = () => {
                 rotate: 0,
                 skew: 0,
                 scale: 1,
+                opacity: 1,
+                y: 0,
               }}
             >
               {!char ? <span>&nbsp;</span> : char}
@@ -56,14 +59,17 @@ const Greeting = () => {
           ))}
           <motion.div
             className=" w-fit ml-2"
+            initial={{ opacity: 0, y: 20 }}
             whileHover={{
-              rotate: [0, 30, 0], // Rotate to 360 degrees and back to 0
+              rotate: [0, 30, 0],
             }}
             transition={{
               duration: 0.5,
             }}
             animate={{
               rotate: 0,
+              opacity: 1,
+              y: 0,
             }}
           >
             👋
