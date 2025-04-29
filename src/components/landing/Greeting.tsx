@@ -103,7 +103,7 @@ const Greeting = () => {
             <Link href={"/play"} className="p-2 md:p-0">
               <Button
                 variant={"outline"}
-                className="font-bold tracking-wider ml-2 border-orange-500 text-orange-500 hover:bg-orange-600"
+                className="font-bold tracking-wider ml-2 border-orange-500 text-orange-500 hover:bg-orange-600 hover:text-white"
               >
                 <Icon icon="icon-park-solid:game-ps" width="48" height="48" />
                 Play

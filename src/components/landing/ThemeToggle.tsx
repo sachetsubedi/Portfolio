@@ -22,25 +22,43 @@ export function ModeToggle() {
 
   return (
     <div className="sticky top-0 left-0 z-[100] bg-inherit h-16 ">
+      {pathname != "/" && (
+        <Link href="/">
+          <Tooltip delayDuration={10}>
+            <TooltipTrigger asChild>
+              <Button
+                variant="outline"
+                size="sm"
+                className="absolute top-3 left-5 z-[1000000] h-9"
+              >
+                <Icon icon="solar:home-2-linear" />
+              </Button>
+            </TooltipTrigger>
+            <TooltipContent className="font-bold z-[1000000]">
+              Home
+            </TooltipContent>
+          </Tooltip>
+        </Link>
+      )}
+      {pathname != "/" && (
+        <Link href="/play" className="absolute left-16">
+          <Tooltip delayDuration={10}>
+            <TooltipTrigger asChild>
+              <Button
+                variant="outline"
+                size="sm"
+                className="absolute top-3 left-5 z-[1000000] h-9 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white"
+              >
+                <Icon icon="icon-park-solid:game-ps" />
+              </Button>
+            </TooltipTrigger>
+            <TooltipContent className="font-bold z-[1000000]">
+              Games
+            </TooltipContent>
+          </Tooltip>
+        </Link>
+      )}
       <DropdownMenu>
-        {pathname != "/" && (
-          <Link href="/">
-            <Tooltip delayDuration={10}>
-              <TooltipTrigger asChild>
-                <Button
-                  variant="outline"
-                  size="sm"
-                  className="absolute top-3 left-5 z-[1000000] h-9"
-                >
-                  <Icon icon="solar:home-2-linear" />
-                </Button>
-              </TooltipTrigger>
-              <TooltipContent className="font-bold z-[1000000]">
-                Home
-              </TooltipContent>
-            </Tooltip>
-          </Link>
-        )}
         <Tooltip delayDuration={10}>
           <TooltipTrigger
             asChild
