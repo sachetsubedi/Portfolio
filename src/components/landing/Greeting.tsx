@@ -1,3 +1,4 @@
+import { Icon } from "@iconify/react/dist/iconify.js";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { Button } from "../ui/button";
@@ -90,13 +91,22 @@ const Greeting = () => {
             I build things for the web.
           </span>
           <ContactIcons></ContactIcons>
-          <div>
+          <div className="flex items-center">
             <Link href={"/about"} className="p-2 md:p-0">
               <Button
                 variant={"outline"}
                 className="font-bold tracking-wider ml-2"
               >
                 About Me
+              </Button>
+            </Link>
+            <Link href={"/play"} className="p-2 md:p-0">
+              <Button
+                variant={"outline"}
+                className="font-bold tracking-wider ml-2 border-orange-500 text-orange-500 hover:bg-orange-600"
+              >
+                <Icon icon="icon-park-solid:game-ps" width="48" height="48" />
+                Play
               </Button>
             </Link>
           </div>
