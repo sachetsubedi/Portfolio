@@ -18,11 +18,9 @@ const Page = () => {
         <iframe
           onLoad={() => {
             setLoaded(true);
-            console.log("loaded");
           }}
           src={games[0].url}
           className="w-full h-[92.7dvh] md:h-[88vh]  md:mt-0"
-          // className="w-full h-screen mt-5 md:mt-0"
         ></iframe>
       }
     </div>
