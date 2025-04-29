@@ -6,7 +6,7 @@ const Page = () => {
   const [loaded, setLoaded] = useState(false);
 
   return (
-    <div className="p-5 flex items-center justify-center relative">
+    <div className="p-0 md:p-5 flex items-center justify-center relative">
       {!loaded && (
         <div className="absolute  flex-row top-0 left-0 text-center w-full mt-10">
           <div className="flex items-center justify-center gap-5">
@@ -21,7 +21,8 @@ const Page = () => {
             console.log("loaded");
           }}
           src={games[0].url}
-          className="w-full h-[88vh]"
+          className="w-full h-[92.7dvh] md:h-[88vh]  md:mt-0"
+          // className="w-full h-screen mt-5 md:mt-0"
         ></iframe>
       }
     </div>
