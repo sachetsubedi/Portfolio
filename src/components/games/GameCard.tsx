@@ -7,12 +7,12 @@ import { useRouter } from "next/navigation";
 import { FC } from "react";
 import { Tooltip, TooltipContent, TooltipTrigger } from "../ui/tooltip";
 
-const GameCard: FC<T_Game> = ({ img, name, url }) => {
+const GameCard: FC<T_Game> = ({ img, name, url, slug }) => {
   const router = useRouter();
   return (
     <div
       onClick={() => {
-        router.push(`/play/${name}`);
+        router.push(`/play/${slug}`);
       }}
       className="flex flex-col  gap-3 border-2 border-black dark:border-white p-5 rounded-md cursor-pointer hover:scale-[1.01] transition-transform duration-300"
     >
@@ -21,7 +21,7 @@ const GameCard: FC<T_Game> = ({ img, name, url }) => {
         alt={name}
         width={300}
         height={300}
-        className="rounded-lg"
+        className="rounded-lg h-36"
       />
       <div className="text-lg flex justify-between items-center">
         <div>{name}</div>

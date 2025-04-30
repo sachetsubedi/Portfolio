@@ -1,9 +1,14 @@
 "use client";
 import { games } from "@/lib/games";
-import { useState } from "react";
+import { FC, Usable, use, useState } from "react";
 
-const Page = () => {
+const Page: FC<{ params: Usable<{ playId: string }> }> = ({ params }) => {
   const [loaded, setLoaded] = useState(false);
+  const resolvedparams = use(params);
+
+  const gameIndex = games.findIndex(
+    (game) => game.slug === resolvedparams.playId
+  );
 
   return (
     <div className="p-0 md:p-5 flex items-center justify-center relative">
@@ -19,7 +24,7 @@ const Page = () => {
           onLoad={() => {
             setLoaded(true);
           }}
-          src={games[0].url}
+          src={games[gameIndex].url}
           className="w-full h-[92.7dvh] md:h-[88vh]  md:mt-0"
         ></iframe>
       }
