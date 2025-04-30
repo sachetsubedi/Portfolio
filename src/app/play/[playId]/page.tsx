@@ -1,8 +1,8 @@
 "use client";
 import { games } from "@/lib/games";
-import { FC, Usable, use, useState } from "react";
+import { FC, use, useState } from "react";
 
-const Page: FC<{ params: Usable<{ playId: string }> }> = ({ params }) => {
+const Page: FC<{ params: Promise<{ playId: string }> }> = ({ params }) => {
   const [loaded, setLoaded] = useState(false);
   const resolvedparams = use(params);
 
