@@ -214,6 +214,14 @@ export const projects: {
     techStacks: [{ title: "Next js", color: E_SKILLCOLORS.nextjs }],
   },
   {
+    title: "Tailwindcss init alternative",
+    demoUrl: "https://www.npmjs.com/package/tailwindcss-init-alt",
+    githubUrl: "",
+    description: "A simple CLI tool that creates a tailwind.config.js file to enable Tailwind CSS IntelliSense when using the CDN version of Tailwind .",
+    img: "/projects/tailwind-init.png",
+    techStacks: [{ title: "JavaScript", color: E_SKILLCOLORS.js }, { title: "NPM", color: E_SKILLCOLORS.html }],
+  },
+  {
     title: "Image Analyzer",
     demoUrl: "https://analyze.sachetsubedi001.com.np",
     githubUrl: "https://github.com/sachetsubedi/image-analyzer",
