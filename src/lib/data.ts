@@ -217,9 +217,13 @@ export const projects: {
     title: "Tailwindcss init alternative",
     demoUrl: "https://www.npmjs.com/package/tailwindcss-init-alt",
     githubUrl: "",
-    description: "A simple CLI tool that creates a tailwind.config.js file to enable Tailwind CSS IntelliSense when using the CDN version of Tailwind .",
+    description:
+      "A simple CLI tool that creates a tailwind.config.js file to enable Tailwind CSS IntelliSense when using the CDN version of Tailwind .",
     img: "/projects/tailwind-init.png",
-    techStacks: [{ title: "JavaScript", color: E_SKILLCOLORS.js }, { title: "NPM", color: E_SKILLCOLORS.html }],
+    techStacks: [
+      { title: "JavaScript", color: E_SKILLCOLORS.js },
+      { title: "NPM", color: E_SKILLCOLORS.html },
+    ],
   },
   {
     title: "Image Analyzer",
@@ -285,6 +289,7 @@ export const techStack = [
     topic: "Frameworks and Libraries",
     items: [
       { icon: "simple-icons:react", title: "React" },
+      { icon: "simple-icons:redux", title: "Redux" },
       { icon: "ri:nextjs-fill", title: "Next.js" },
       { icon: "simple-icons:express", title: "Express" },
       { icon: "mdi:nodejs", title: "Node.js" },

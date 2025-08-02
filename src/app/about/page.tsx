@@ -1,157 +1,90 @@
 "use client";
-import ContactCard from "@/components/about/ContactCard";
 import OverviewCard from "@/components/about/OverviewCard";
-import Projects from "@/components/about/Projects";
-import TabItem from "@/components/about/TabItem";
-import TechStack from "@/components/about/TechStack";
-import { Toaster } from "@/components/ui/sonner";
-import { Tab, Tabs } from "@mui/material";
-import { useTheme } from "next-themes";
+import AnimatedBackground from "@/components/ui/animated-background";
+import LoadingSkeleton from "@/components/ui/loading-skeleton";
+import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
-const Page = () => {
-  const [tabValue, setTabValue] = useState(0);
+
+const AboutPage = () => {
   const [isClient, setIsClient] = useState(false);
 
-  const theme = useTheme();
-
-  // Set isClient to true once the component has been hydrated on the client side
   useEffect(() => {
     setIsClient(true);
   }, []);
 
-  // Avoid rendering if the theme is not yet resolved
   if (!isClient) {
-    return null;
+    return (
+      <div className="flex justify-center min-h-screen">
+        <LoadingSkeleton />
+      </div>
+    );
   }
 
+  const containerVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.6,
+        staggerChildren: 0.1
+      }
+    }
+  };
+
+  const headerVariants = {
+    hidden: { opacity: 0, y: -20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6, delay: 0.1 }
+    }
+  };
+
   return (
-    <div className="flex justify-center">
-      <div className=" w-full lg:w-1/2">
-        <Tabs
-          value={tabValue}
-          sx={{
-            "& .MuiTabs-indicator": {
-              backgroundColor:
-                theme.resolvedTheme == "light" ? "black" : "white",
-            },
-            fontFamily: "inherit",
-            // marginTop: "10rem",
-
-            "& .MuiTabs-flexContainer": {
-              gap: 3,
-              "@media (max-width: 600px)": {
-                gap: 0, // Adjust gap for mobile
-              },
-            },
-          }}
+    <motion.div
+      className="min-h-screen pt-24 pb-10"
+      variants={containerVariants}
+      initial="hidden"
+      animate="visible"
+    >
+      <AnimatedBackground />
+      <div className="container mx-auto px-4 relative z-10 max-w-6xl">
+        {/* Page Header */}
+        <motion.div
+          className="text-center mb-12 mt-8"
+          variants={headerVariants}
         >
-          <Tab
-            value={0}
-            label={<TabItem icon="solar:user-bold" label="Overview"></TabItem>}
-            onClick={() => {
-              setTabValue(0);
-            }}
-            sx={{
-              textTransform: "none",
-              color: "gray",
-              "&.Mui-selected": {
-                color: theme.resolvedTheme == "light" ? "black" : "white",
-              },
-              fontWeight: "bold",
-              fontFamily: "inherit",
-              fontSize: "1.125rem",
-              "@media (max-width: 600px)": {
-                fontSize: "0.8rem",
-              },
-              letterSpacing: "0.05em",
-            }}
-          />
+          <motion.h1
+            className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+          >
+            About Me
+          </motion.h1>
+          <motion.p
+            className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto leading-relaxed"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
+            Get to know me better. My journey, experiences, and what drives me
+            as a developer and creative problem solver.
+          </motion.p>
+        </motion.div>
 
-          <Tab
-            value={1}
-            label={
-              <TabItem
-                icon="solar:laptop-minimalistic-bold"
-                label="Projects"
-              ></TabItem>
-            }
-            onClick={() => {
-              setTabValue(1);
-            }}
-            sx={{
-              textTransform: "none",
-              color: "gray",
-              "&.Mui-selected": {
-                color: theme.resolvedTheme == "light" ? "black" : "white",
-              },
-              fontWeight: "bold",
-              fontFamily: "inherit",
-              fontSize: "1.125rem",
-              "@media (max-width: 600px)": {
-                fontSize: "0.8rem",
-              },
-              letterSpacing: "0.05em",
-            }}
-          />
-
-          <Tab
-            value={2}
-            label={
-              <TabItem
-                icon="solar:code-square-bold"
-                label="Tech Stack"
-              ></TabItem>
-            }
-            onClick={() => {
-              setTabValue(2);
-            }}
-            sx={{
-              textTransform: "none",
-              color: "gray",
-              "&.Mui-selected": {
-                color: theme.resolvedTheme == "light" ? "black" : "white",
-              },
-              fontWeight: "bold",
-              fontFamily: "inherit",
-              fontSize: "1.125rem",
-              "@media (max-width: 600px)": {
-                fontSize: "0.8rem",
-              },
-              letterSpacing: "0.05em",
-            }}
-          />
-
-          <Tab
-            value={3}
-            label={<TabItem icon="solar:phone-bold" label="Contact"></TabItem>}
-            onClick={() => {
-              setTabValue(3);
-            }}
-            sx={{
-              textTransform: "none",
-              color: "gray",
-              "&.Mui-selected": {
-                color: theme.resolvedTheme == "light" ? "black" : "white",
-              },
-              fontWeight: "bold",
-              fontFamily: "inherit",
-              fontSize: "1.125rem",
-              "@media (max-width: 600px)": {
-                fontSize: "0.8rem",
-              },
-              letterSpacing: "0.05em",
-            }}
-          />
-        </Tabs>
-        <OverviewCard hidden={tabValue != 0}></OverviewCard>
-        <Projects hidden={tabValue != 1}></Projects>
-        <TechStack hidden={tabValue != 2}></TechStack>
-        <ContactCard hidden={tabValue != 3}></ContactCard>
-        <Toaster position="top-center" />
+        {/* About Content */}
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+        >
+          <OverviewCard hidden={false} />
+        </motion.div>
       </div>
-    </div>
-    // </BackgroundBeamsWithCollision>
+    </motion.div>
   );
 };
 
-export default Page;
+export default AboutPage;

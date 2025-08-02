@@ -11,19 +11,19 @@ const ContactIcons = () => {
             title: "",
             description: "",
             link: "https://github.sachetsubedi001.com.np",
-            icon: <Icon icon={"mdi:github"}></Icon>,
+            icon: <Icon icon={"mdi:github"} className="text-3xl sm:text-4xl" />,
           },
           {
             title: "",
             description: "",
             link: "https://ln.sachetsubedi001.com.np",
-            icon: <Icon icon={"mdi:linkedin"}></Icon>,
+            icon: <Icon icon={"mdi:linkedin"} className="text-3xl sm:text-4xl" />,
           },
           {
             title: "",
             description: "",
             link: "https://insta.sachetsubedi001.com.np",
-            icon: <Icon icon={"mdi:instagram"}></Icon>,
+            icon: <Icon icon={"mdi:instagram"} className="text-3xl sm:text-4xl" />,
           },
         ]}
       ></HoverEffect>
