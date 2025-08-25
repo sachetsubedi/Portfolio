@@ -5,7 +5,6 @@ import { IconCloud } from "../ui/icon-cloud";
 
 const IconGlobe = () => {
   const theme = useTheme();
-
   const getColor = (color: string | undefined) => {
     if (!color) return null;
     return theme.resolvedTheme === "dark" ? "white" : "black";
